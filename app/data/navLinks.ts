@@ -12,6 +12,7 @@ export interface NavLink {
 
 const navLinks: NavLink[] = [
   { name: 'Shows', href: '/' },
+  { name: 'Schedule', href: '/schedule' },
   {
     name: 'Watch',
     megaMenu: [
@@ -30,9 +31,6 @@ const navLinks: NavLink[] = [
       },
     ],
   },
-  { name: 'Store', href: '/store' },
-  { name: 'Events', href: '/events' },
-  { name: 'Contact', href: '/contact' },
 ];
 
 export default navLinks;
