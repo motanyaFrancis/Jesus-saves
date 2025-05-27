@@ -5,7 +5,7 @@ import ProgramInfoSection from '@/components/ProgramInfoSection';
 import { showDetailsMap } from '@/data/showDetails';
 import { Metadata } from 'next';
 
-interface ShowPageProps {
+interface PageProps {
   params: { slug: string };
 }
 
@@ -15,8 +15,8 @@ export async function generateStaticParams() {
 }
 
 // Metadata generation
-export async function generateMetadata({ params }: ShowPageProps): Promise<Metadata> {
-  const { slug } = await params; // await the proxy
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params; 
 
   const show = allShows.find((s) => s.slug === slug);
   return {
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: ShowPageProps): Promise<Metad
 }
 
 // Main page
-const ShowPage = async ({ params }: ShowPageProps) => {
+const ShowPage = async ({ params }: PageProps) => {
   const { slug } = await params; 
 
   const show = allShows.find((s) => s.slug === slug);
