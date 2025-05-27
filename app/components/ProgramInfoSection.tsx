@@ -35,7 +35,7 @@ const ProgramInfoSection: React.FC<ShowPageProps> = ({ show, host, panelists }) 
           </div>
 
           {/* Host */}
-          <div className="bg-gray-50 p-4">
+          <div className="bg-gray-50 p-4 border-t-1 border-gray-500/50 ">
             <h3 className="text-lg font-semibold mb-4 text-gray-900 uppercase">Host</h3>
             <div className="flex items-center space-x-4">
               <Image
