@@ -1,6 +1,12 @@
 import DailySchedule from '@/components/DailySchedule';
 import Link from 'next/link'
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Schedule',
+};
+
 const HomePage = () => {
     return (
         <main className='bg-gray-50'>

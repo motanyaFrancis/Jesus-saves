@@ -3,6 +3,8 @@ import Footer from '@/components/Footer';
 import ImageCarousel from '@/components/ImageCarousel';
 import DailyHighlightsSection from '@/components/DailyHighlightsSection';
 
+import VerticalDonateButton from '@/components/VerticalDonateButton';
+
 const HomePage: React.FC = () => {
   const carouselImages = [
     { src: '/images/sample.avif', alt: 'Scenic mountain view' },
@@ -29,7 +31,7 @@ const HomePage: React.FC = () => {
     {
       imageSrc: '/images/sample.avif',
       imageAlt: 'Beautiful natural landscape',
-      title: 'Worship In Musig',
+      title: 'Worship In Music',
     },
     {
       imageSrc: '/images/sample.avif',
@@ -39,21 +41,22 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gray-50 h-full w-full flex flex-col min-h-screen">
+    <>
+      <VerticalDonateButton />
       <Navbar />
+      <div className="bg-gray-50 h-full w-full flex flex-col min-h-screen">
+        <main className="flex-grow py-12">
+          <ImageCarousel
+            images={carouselImages}
+            autoSlide={true}
+            autoSlideInterval={5000}
+          />
+          <DailyHighlightsSection highlights={dailyHighlightsData} />
+        </main>
 
-
-      <main className="flex-grow py-12">
-        <ImageCarousel
-          images={carouselImages}
-          autoSlide={true}
-          autoSlideInterval={5000}
-        />
-        <DailyHighlightsSection highlights={dailyHighlightsData} />
-      </main>
-
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }
 
