@@ -106,10 +106,10 @@ const DailySchedule: React.FC = () => {
               <div className="p-4">
                 <button
                   onClick={closeMediaModal}
-                  className="absolute top-3 right-3 bg-rose-500 p-1 px-2 rounded-full text-gray-50 hover:text-gray-200 text-2xl font-bold"
+                  className="absolute top-3 right-3  text-gray-50 hover:text-gray-200 text-2xl font-bold cursor-pointer"
                   aria-label="Close"
                 >
-                  &times;
+                 ✕
                 </button>
                 <h3 className="text-xl font-semibold text-gray-50 mb-4">{currentMedia.title}</h3>
               </div>
