@@ -19,7 +19,7 @@ interface ShowPageProps {
 }
 
 const ProgramInfoSection: React.FC<ShowPageProps> = ({ show, host, panelists }) => {
-  const { title, description, imageUrl, imageAlt } = show;
+  const { description, imageUrl, imageAlt } = show;
 
  
 

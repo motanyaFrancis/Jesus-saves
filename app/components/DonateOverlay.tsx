@@ -1,6 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react'; // Import useEffect
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { useDonateOverlay } from './DonateOverlayProvider';
 
 export default function DonateOverlay() {
@@ -96,15 +98,19 @@ export default function DonateOverlay() {
                     {/* Left Card - 20% slimmer (approx. md:w-[40%] or md:w-2/5) */}
                     {/* On small screens, this will be rounded-t-xl, on medium and up, rounded-l-xl */}
                     <div className="hidden md:block md:w-[60%] bg-gray-50 p-0 flex-col rounded-xl  shadow-lg overflow-hidden">
-                        <img
+                        <Image
                             src="/images/jesus-saves.jpg"
                             alt="Support Illustration"
+                            width={800}
+                            height={200}
                             className="w-full h-48 object-cover"
                         />
                         <div className="p-6 flex flex-col items-start text-left">
-                            <img
+                            <Image
                                 src="/images/logo.png"
                                 alt="Organization Logo"
+                                width={96} // Equivalent to 24 tailwind width (w-24)
+                                height={40}
                                 className="w-24 h-auto mb-4"
                             />
                             <h2 className="text-xl font-bold text-gray-800">Support Our Mission</h2>
@@ -132,21 +138,19 @@ export default function DonateOverlay() {
                                 <div className="flex mb-6 border border-gray-300 rounded-md overflow-hidden">
                                     <button
                                         onClick={() => setDonationType('once')}
-                                        className={`flex-1 py-2 text-center text-sm font-medium ${
-                                            donationType === 'once'
-                                                ? 'bg-rose-900 text-white'
-                                                : 'bg-white text-gray-700'
-                                        }`}
+                                        className={`flex-1 py-2 text-center text-sm font-medium ${donationType === 'once'
+                                            ? 'bg-rose-900 text-white'
+                                            : 'bg-white text-gray-700'
+                                            }`}
                                     >
                                         Give once
                                     </button>
                                     <button
                                         onClick={() => setDonationType('monthly')}
-                                        className={`flex-1 py-2 text-center text-sm font-medium ${
-                                            donationType === 'monthly'
-                                                ? 'bg-rose-900 text-white'
-                                                : 'bg-white text-gray-700'
-                                        } flex items-center justify-center`}
+                                        className={`flex-1 py-2 text-center text-sm font-medium ${donationType === 'monthly'
+                                            ? 'bg-rose-900 text-white'
+                                            : 'bg-white text-gray-700'
+                                            } flex items-center justify-center`}
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-rose-400 mr-1" viewBox="0 0 20 20" fill="currentColor">
                                             <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
@@ -192,7 +196,7 @@ export default function DonateOverlay() {
                                             <option value="EUR">EUR</option>
                                         </select>
                                         <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                            <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                            <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
                                         </div>
                                     </div>
                                 </div>
@@ -213,16 +217,16 @@ export default function DonateOverlay() {
                                 <div className="text-sm mb-6">
                                     <div className="flex items-center mb-2">
                                         <span className="text-gray-700 mr-1">Designate to</span>
-                                        <a href="#" className="text-rose-900 hover:underline flex items-center">
+                                        <Link href="#" className="text-rose-900 hover:underline flex items-center">
                                             Where needed most
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                                             </svg>
-                                        </a>
+                                        </Link>
                                     </div>
-                                    <a href="#" className="text-rose-900 hover:underline">
+                                    <Link href="#" className="text-rose-900 hover:underline">
                                         Add comment
-                                    </a>
+                                    </Link>
                                 </div>
 
                                 {/* Next button */}
@@ -306,31 +310,28 @@ export default function DonateOverlay() {
                                 <div className="flex flex-col space-y-4 mb-6">
                                     <button
                                         onClick={() => setSelectedPaymentMethod('M-Pesa')}
-                                        className={`py-3 rounded-md font-semibold transition ${
-                                            selectedPaymentMethod === 'M-Pesa'
-                                                ? 'bg-rose-700 text-white ring-2 ring-rose-500'
-                                                : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-                                        }`}
+                                        className={`py-3 rounded-md font-semibold transition ${selectedPaymentMethod === 'M-Pesa'
+                                            ? 'bg-rose-700 text-white ring-2 ring-rose-500'
+                                            : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                                            }`}
                                     >
                                         M-Pesa
                                     </button>
                                     <button
                                         onClick={() => setSelectedPaymentMethod('Visa / MasterCard')}
-                                        className={`py-3 rounded-md font-semibold transition ${
-                                            selectedPaymentMethod === 'Visa / MasterCard'
-                                                ? 'bg-gray-800 text-white ring-2 ring-gray-600'
-                                                : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-                                        }`}
+                                        className={`py-3 rounded-md font-semibold transition ${selectedPaymentMethod === 'Visa / MasterCard'
+                                            ? 'bg-gray-800 text-white ring-2 ring-gray-600'
+                                            : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                                            }`}
                                     >
                                         Visa / MasterCard
                                     </button>
                                     <button
                                         onClick={() => setSelectedPaymentMethod('PayPal')}
-                                        className={`py-3 rounded-md font-semibold transition ${
-                                            selectedPaymentMethod === 'PayPal'
-                                                ? 'bg-rose-900 text-white ring-2 ring-rose-500'
-                                                : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-                                        }`}
+                                        className={`py-3 rounded-md font-semibold transition ${selectedPaymentMethod === 'PayPal'
+                                            ? 'bg-rose-900 text-white ring-2 ring-rose-500'
+                                            : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                                            }`}
                                     >
                                         PayPal
                                     </button>
