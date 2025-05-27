@@ -81,7 +81,7 @@ export default function DonateOverlay() {
 
     if (!isOpen) return null;
 
-    const predefinedAmounts = [90000, 50000, 25000, 10000, 6000, 5000];
+    const proseefinedAmounts = [90000, 50000, 25000, 10000, 6000, 5000];
 
     return (
         <div className="fixed inset-0 bg-black/70 z-[1000] flex items-center justify-center p-4">
@@ -109,7 +109,7 @@ export default function DonateOverlay() {
                             />
                             <h2 className="text-xl font-bold text-gray-800">Support Our Mission</h2>
                             <p className="text-gray-600 mt-2 text-sm">
-                                Did you know 3.4 billion people have yet to be reached with a message of Eternal Hope? With over 7,000 unreached people groups, our mission isn&apos;t just about numbers; it’s about reaching hearts across diverse cultures and languages. At Hope Channel, we are committed to sharing the message of hope in over 100 languages across more than 80 countries. Our tailored content meets the unique spiritual needs of each community, but there is still so much more to do. Give Hope today, and join us in reaching 1 billion souls with Eternal Hope.
+                                Did you know 3.4 billion people have yet to be reached with a message of Eternal Hope? With over 7,000 unreached people groups, our mission isn&apos;t just about numbers; it’s about reaching hearts across diverse cultures and languages. At Hope Channel, we are committed to sharing the message of hope in over 100 languages across more than 80 countries. Our tailorose content meets the unique spiritual needs of each community, but there is still so much more to do. Give Hope today, and join us in reaching 1 billion souls with Eternal Hope.
                             </p>
                         </div>
                     </div>
@@ -134,7 +134,7 @@ export default function DonateOverlay() {
                                         onClick={() => setDonationType('once')}
                                         className={`flex-1 py-2 text-center text-sm font-medium ${
                                             donationType === 'once'
-                                                ? 'bg-blue-600 text-white'
+                                                ? 'bg-rose-900 text-white'
                                                 : 'bg-white text-gray-700'
                                         }`}
                                     >
@@ -144,11 +144,11 @@ export default function DonateOverlay() {
                                         onClick={() => setDonationType('monthly')}
                                         className={`flex-1 py-2 text-center text-sm font-medium ${
                                             donationType === 'monthly'
-                                                ? 'bg-blue-600 text-white'
+                                                ? 'bg-rose-900 text-white'
                                                 : 'bg-white text-gray-700'
                                         } flex items-center justify-center`}
                                     >
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-red-400 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-rose-400 mr-1" viewBox="0 0 20 20" fill="currentColor">
                                             <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
                                         </svg>
                                         Monthly
@@ -157,13 +157,13 @@ export default function DonateOverlay() {
 
                                 {/* Donation amount buttons */}
                                 <div className="grid grid-cols-3 gap-3 mb-4">
-                                    {predefinedAmounts.map(amount => (
+                                    {proseefinedAmounts.map(amount => (
                                         <button
                                             key={amount}
                                             onClick={() => handleAmountSelect(amount)}
                                             className={`py-3 rounded-md border text-sm font-medium transition
                                                 ${selectedAmount === amount
-                                                    ? 'border-blue-600 bg-blue-50 text-blue-800 ring-1 ring-blue-600'
+                                                    ? 'border-rose-900 bg-rose-50 text-rose-800 ring-1 ring-rose-900'
                                                     : 'border-gray-300 bg-white text-gray-700 hover:border-gray-400'
                                                 }`}
                                         >
@@ -173,7 +173,7 @@ export default function DonateOverlay() {
                                 </div>
 
                                 {/* Custom amount input with currency selector */}
-                                <div className="flex items-center border border-gray-300 rounded-md focus-within:ring-1 focus-within:ring-blue-600 focus-within:border-blue-600 mb-4">
+                                <div className="flex items-center border border-gray-300 rounded-md focus-within:ring-1 focus-within:ring-rose-900 focus-within:border-rose-900 mb-4">
                                     <input
                                         type="number"
                                         placeholder="Other amount"
@@ -202,7 +202,7 @@ export default function DonateOverlay() {
                                     <input
                                         id="dedicate-donation"
                                         type="checkbox"
-                                        className="form-checkbox h-4 w-4 text-blue-600 rounded"
+                                        className="form-checkbox h-4 w-4 text-rose-900 rounded"
                                     />
                                     <label htmlFor="dedicate-donation" className="ml-2 text-gray-700 text-sm">
                                         Dedicate this donation
@@ -213,14 +213,14 @@ export default function DonateOverlay() {
                                 <div className="text-sm mb-6">
                                     <div className="flex items-center mb-2">
                                         <span className="text-gray-700 mr-1">Designate to</span>
-                                        <a href="#" className="text-blue-600 hover:underline flex items-center">
+                                        <a href="#" className="text-rose-900 hover:underline flex items-center">
                                             Where needed most
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                                             </svg>
                                         </a>
                                     </div>
-                                    <a href="#" className="text-blue-600 hover:underline">
+                                    <a href="#" className="text-rose-900 hover:underline">
                                         Add comment
                                     </a>
                                 </div>
@@ -228,7 +228,7 @@ export default function DonateOverlay() {
                                 {/* Next button */}
                                 <button
                                     onClick={handleProceedToDetails}
-                                    className="w-full bg-blue-600 text-white py-3 rounded-md font-semibold hover:bg-blue-700 transition"
+                                    className="w-full bg-rose-900 text-white py-3 rounded-md font-semibold hover:bg-rose-700 transition"
                                 >
                                     Next
                                 </button>
@@ -245,7 +245,7 @@ export default function DonateOverlay() {
                                     <input
                                         type="text"
                                         id="donorName"
-                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-1 focus:ring-blue-600"
+                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-1 focus:ring-rose-900"
                                         value={donorName}
                                         onChange={(e) => setDonorName(e.target.value)}
                                         disabled={isAnonymous}
@@ -258,7 +258,7 @@ export default function DonateOverlay() {
                                     <input
                                         type="email"
                                         id="donorEmail"
-                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-1 focus:ring-blue-600"
+                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-1 focus:ring-rose-900"
                                         value={donorEmail}
                                         onChange={(e) => setDonorEmail(e.target.checked ? '' : e.target.value)} // Clear email if anonymous
                                         disabled={isAnonymous}
@@ -268,7 +268,7 @@ export default function DonateOverlay() {
                                     <input
                                         id="anonymous-donation"
                                         type="checkbox"
-                                        className="form-checkbox h-4 w-4 text-blue-600 rounded"
+                                        className="form-checkbox h-4 w-4 text-rose-900 rounded"
                                         checked={isAnonymous}
                                         onChange={(e) => {
                                             setIsAnonymous(e.target.checked);
@@ -292,7 +292,7 @@ export default function DonateOverlay() {
                                     </button>
                                     <button
                                         onClick={handleProceedToPayment}
-                                        className="flex-1 bg-blue-600 text-white py-3 rounded-md font-semibold hover:bg-blue-700 transition"
+                                        className="flex-1 bg-rose-900 text-white py-3 rounded-md font-semibold hover:bg-rose-700 transition"
                                     >
                                         Next
                                     </button>
@@ -308,7 +308,7 @@ export default function DonateOverlay() {
                                         onClick={() => setSelectedPaymentMethod('M-Pesa')}
                                         className={`py-3 rounded-md font-semibold transition ${
                                             selectedPaymentMethod === 'M-Pesa'
-                                                ? 'bg-red-700 text-white ring-2 ring-red-500'
+                                                ? 'bg-rose-700 text-white ring-2 ring-rose-500'
                                                 : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
                                         }`}
                                     >
@@ -328,7 +328,7 @@ export default function DonateOverlay() {
                                         onClick={() => setSelectedPaymentMethod('PayPal')}
                                         className={`py-3 rounded-md font-semibold transition ${
                                             selectedPaymentMethod === 'PayPal'
-                                                ? 'bg-blue-600 text-white ring-2 ring-blue-500'
+                                                ? 'bg-rose-900 text-white ring-2 ring-rose-500'
                                                 : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
                                         }`}
                                     >

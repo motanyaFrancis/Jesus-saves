@@ -20,7 +20,7 @@ export default function InlineDonateButton({
         <button
             onClick={open}
             className={clsx(
-                "relative overflow-hidden bg-red-700 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition pulse-spread cursor-pointer",
+                "relative overflow-hidden bg-rose-900 text-white px-4 py-2 rounded-lg hover:bg-rose-800 transition pulse-spread cursor-pointer",
                 className
             )}
         >

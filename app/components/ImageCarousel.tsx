@@ -1,6 +1,7 @@
-"use client";
+'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 
 interface ImageCarouselProps {
   images: { src: string; alt: string }[];
@@ -22,7 +23,6 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   const goToPrevious = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   }, [images.length]);
-
 
   useEffect(() => {
     if (autoSlide) {
@@ -47,13 +47,15 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {images.map((image, index) => (
-
             <div key={index} className="w-full flex-shrink-0">
-              <div className="relative w-full aspect-16/9">
-                <img
+              <div className="relative w-full aspect-[16/9]">
+                <Image
                   src={image.src}
                   alt={image.alt}
-                  className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                  fill
+                  className="object-cover rounded-lg"
+                  sizes="100vw"
+                  priority={index === 0}
                 />
               </div>
             </div>
@@ -101,16 +103,14 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
               <button
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
-                className={`h-3 w-3 rounded-full ${currentIndex === idx ? 'bg-white' : 'bg-gray-400 bg-opacity-75'
-                  }`}
+                className={`h-3 w-3 rounded-full ${currentIndex === idx ? 'bg-white' : 'bg-gray-400 bg-opacity-75'}`}
                 aria-label={`Go to slide ${idx + 1}`}
               ></button>
             ))}
           </div>
         )}
       </div>
-
-    </section >
+    </section>
   );
 };
 
