@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
       <div className="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           <div>
-            <p>
+            {/* <p>
               <span className="text-xs tracking-wide text-gray-500 uppercase">
                 Call us
               </span>
@@ -36,11 +36,12 @@ const Footer: React.FC = () => {
               >
                 0123456789
               </a>
-            </p>
+            </p> */}
 
-            <ul className="mt-8 space-y-1 text-sm text-gray-700">
-              <li>Monday to Friday: 10am - 5pm</li>
-              <li>Weekend: 10am - 3pm</li>
+            <ul className="mt-8 space-y-1 text-sm font-medium text-gray-700">
+              <li>Dates: 6th - 18th July 2025</li>
+              <li>Sunday to Friday: 6:00pm - 8:00pm</li>
+              <li>Sarturday: 8:00am - 6:00pm</li>
             </ul>
 
             <ul className="mt-8 flex gap-6 text-rose-900">
@@ -72,11 +73,11 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <div>
-              <p className="font-medium text-gray-900">Programs</p>
+              <p className="font-bold uppercase text-gray-900">Programs</p>
 
-              <ul className="mt-6 space-y-4 text-sm">
+              <ul className="mt-6 space-y-2 font-semibold text-sm">
                 <li>
                   <Link href="#" className="text-gray-700 transition hover:opacity-75">
                     Family Hub
