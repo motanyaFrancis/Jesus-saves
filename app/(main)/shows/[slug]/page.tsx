@@ -1,4 +1,5 @@
 // app/(main)/shows/[slug]/page.tsx
+
 import { notFound } from 'next/navigation';
 import { allShows } from '@/data/shows';
 import PageHeader from '@/components/PageHeader';
@@ -6,28 +7,10 @@ import ProgramInfoSection from '@/components/ProgramInfoSection';
 import { showDetailsMap } from '@/data/showDetails';
 import { Metadata } from 'next';
 
-// IMPORTANT: We need to adjust how PageProps handles params
-// In Next.js 15, `params` is effectively a Promise-like object.
-// The best approach is to let the function signature handle the await
-// and define the _resolved_ type of params within the interface.
-// However, to satisfy the build system's expectation that `params` is a Promise-like object
-// when it's passed into the function, we need to declare it as such.
-
-// Let's refine PageProps to reflect the actual runtime behavior for Next.js 15+
+// CRITICAL FIX: Update the PageProps interface definition
+// params is now expected to be a Promise<object> by Next.js 15's types.
 interface PageProps {
-    // This is the tricky part. The *type* of params coming into the function
-    // is now seen by Next.js as Promise<any> or something with .then().
-    // We can't directly type it as Promise<{ slug: string }> if it's not strictly that,
-    // but the build system expects Promise methods.
-    // The safest approach is often to remove the custom PageProps interface for `params`
-    // and let Next.js infer the type correctly for the function arguments.
-
-    // If you absolutely must keep PageProps for other reasons,
-    // a common workaround or way to acknowledge the promise-like nature is:
-    // params: { slug: string } & Promise<any>; // This might work but is hacky.
-
-    // A better approach for the argument type:
-    params: { slug: string }; // Keep this as the *resolved* type for clarity
+    params: Promise<{ slug: string }>; // This is the change you need to ensure is present
 }
 
 // Static params
@@ -36,11 +19,9 @@ export async function generateStaticParams() {
 }
 
 // Metadata generation
-export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-    // The build error explicitly says 'params' is missing Promise methods.
-    // So, we type the incoming 'params' argument as Promise<{ slug: string }>.
-    // This is the crucial change for `generateMetadata`.
-    const { slug } = await props.params; // Await the params directly
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    // You MUST await params here to deconstruct it
+    const { slug } = await params;
 
     const show = allShows.find((s) => s.slug === slug);
 
@@ -52,11 +33,9 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
 
 
 // Main page
-// For the page component, Next.js typically provides params already resolved
-// after internal processing. However, if the error persists here, apply similar logic.
 const ShowPage = async ({ params }: PageProps) => {
-    // THIS IS THE CRITICAL CHANGE FOR ShowPage: Await params
-    const { slug } = await params; // <--- Await params here
+    // And you MUST await params here too
+    const { slug } = await params;
 
     const show = allShows.find((s) => s.slug === slug);
     const extras = showDetailsMap[slug];
