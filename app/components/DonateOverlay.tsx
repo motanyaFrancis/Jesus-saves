@@ -109,7 +109,7 @@ export default function DonateOverlay() {
                             />
                             <h2 className="text-xl font-bold text-gray-800">Support Our Mission</h2>
                             <p className="text-gray-600 mt-2 text-sm">
-                                Did you know 3.4 billion people have yet to be reached with a message of Eternal Hope? With over 7,000 unreached people groups, our mission isn't just about numbers; it’s about reaching hearts across diverse cultures and languages. At Hope Channel, we are committed to sharing the message of hope in over 100 languages across more than 80 countries. Our tailored content meets the unique spiritual needs of each community, but there is still so much more to do. Give Hope today, and join us in reaching 1 billion souls with Eternal Hope.
+                                Did you know 3.4 billion people have yet to be reached with a message of Eternal Hope? With over 7,000 unreached people groups, our mission isn&apos;t just about numbers; it’s about reaching hearts across diverse cultures and languages. At Hope Channel, we are committed to sharing the message of hope in over 100 languages across more than 80 countries. Our tailored content meets the unique spiritual needs of each community, but there is still so much more to do. Give Hope today, and join us in reaching 1 billion souls with Eternal Hope.
                             </p>
                         </div>
                     </div>

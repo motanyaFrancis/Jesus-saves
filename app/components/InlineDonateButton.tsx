@@ -1,7 +1,6 @@
 'use client';
 
 import { useDonateOverlay } from './DonateOverlayProvider';
-import { Heart } from 'lucide-react';
 import { FaHeart } from "react-icons/fa6";
 
 import clsx from 'clsx'; // optional but recommended
