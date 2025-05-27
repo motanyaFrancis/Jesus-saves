@@ -44,7 +44,7 @@ const HomePage: React.FC = () => {
     <>
       <VerticalDonateButton />
       <Navbar />
-      <div className="bg-gray-50 h-full w-full flex flex-col min-h-screen">
+      <div className="bg-gray-50 h-full w-full flex flex-col min-h-screen pt-24">
         <main className="flex-grow py-12">
           <ImageCarousel
             images={carouselImages}

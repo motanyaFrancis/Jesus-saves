@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   title: 'Schedule',
 };
 
-const HomePage = () => {
+const Schedule = () => {
     return (
-        <main className='bg-gray-50'>
+        <main className='bg-gray-50 pt-24'>
             <div className="max-w-7xl  mx-auto px-4 py-8 flex items-center justify-between text-base font-semibold text-gray-600">
                 <nav className="flex items-center space-x-2">
                     <Link href="/" className="hover:underline">Jesus saves</Link>
@@ -28,4 +28,4 @@ const HomePage = () => {
     );
 };
 
-export default HomePage;
+export default Schedule;
