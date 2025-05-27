@@ -1,49 +1,54 @@
 'use client'
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 interface HighlightCardProps {
   imageSrc: string;
   imageAlt: string;
   title: string;
+  slug: string;
 }
 
-const HighlightCard: React.FC<HighlightCardProps> = ({ imageSrc, imageAlt, title }) => {
-  const [imgError, setImgError] = useState(false); 
+const HighlightCard: React.FC<HighlightCardProps> = ({ imageSrc, imageAlt, title, slug }) => {
+  const [imgError, setImgError] = useState(false);
 
   const handleImageError = () => {
-    setImgError(true); 
+    setImgError(true);
   };
 
   return (
-    <div className="flex flex-col rounded-lg shadow-md overflow-hidden bg-white">
-      
-      <div className="relative w-full pt-[56.25%] bg-gray-200 flex items-center justify-center"> 
-        {imgError ? (
-          
-          <div className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm">
-            Image not found
+    <Link href={`/shows/${slug}`}>
+      <div className="block">
+        <div className="flex flex-col rounded-lg shadow-md overflow-hidden bg-white hover:shadow-lg transition-shadow duration-200">
+          <div className="relative w-full pt-[56.25%] bg-gray-200 flex items-center justify-center">
+            {imgError ? (
+              <div className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm">
+                Image not found
+              </div>
+            ) : (
+              <Image
+                src={imageSrc}
+                alt={imageAlt}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                className="object-cover"
+                loading="lazy"
+                onError={handleImageError}
+              />
+            )}
           </div>
-        ) : (
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            fill 
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" 
-            className="object-cover"
-            loading="lazy"
-            onError={handleImageError}
-          />
-        )}
+          <div className="p-4">
+            <h3 className="text-md font-semibold text-gray-900 line-clamp-2">
+              {title}
+            </h3>
+          </div>
+        </div>
       </div>
-      <div className="p-4">
-        <h3 className="text-md font-semibold text-gray-900 line-clamp-2">
-          {title}
-        </h3>
-      </div>
-    </div>
+    </Link>
   );
+
 };
 
 
@@ -69,6 +74,7 @@ const DailyHighlightsSection: React.FC<DailyHighlightsSectionProps> = ({ highlig
                 imageSrc={highlight.imageSrc}
                 imageAlt={highlight.imageAlt}
                 title={highlight.title}
+                slug={highlight.slug} 
               />
             ))}
           </div>
@@ -77,5 +83,6 @@ const DailyHighlightsSection: React.FC<DailyHighlightsSectionProps> = ({ highlig
     </section>
   );
 };
+
 
 export default DailyHighlightsSection;
