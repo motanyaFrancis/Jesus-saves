@@ -6,12 +6,13 @@ import Link from 'next/link';
 import { useDonateOverlay } from './DonateOverlayProvider';
 
 export default function DonateOverlay() {
-    const { isOpen, close } = useDonateOverlay();
+    const { isOpen, close, initialAmount: propInitialAmount, initialDonationType: propInitialDonationType } = useDonateOverlay();
     const [currentStep, setCurrentStep] = useState<'amount' | 'details' | 'payment'>('amount');
-    const [customAmount, setCustomAmount] = useState('5000'); // Default to 5000 as in the picture
-    const [selectedAmount, setSelectedAmount] = useState<number | null>(5000); // Default to 5000
-    const [donationType, setDonationType] = useState<'once' | 'monthly'>('once');
-    const [currency, setCurrency] = useState('KES'); // Default currency
+    // Initialize states with props if available, otherwise use defaults
+    const [customAmount, setCustomAmount] = useState(propInitialAmount ? propInitialAmount.toString() : '5000');
+    const [selectedAmount, setSelectedAmount] = useState<number | null>(propInitialAmount || 5000);
+    const [donationType, setDonationType] = useState<'once' | 'monthly'>(propInitialDonationType || 'once');
+    const [currency, setCurrency] = useState('KES'); // Default currency, now fixed to KES
 
     // State for the 'details' step
     const [donorName, setDonorName] = useState('');
@@ -20,6 +21,18 @@ export default function DonateOverlay() {
 
     // State for the 'payment' step (selected payment method)
     const [selectedPaymentMethod, setSelectedPaymentMethod] = useState<string | null>(null);
+
+    // Effect to update states when initial props change (e.g., when overlay is opened with new values)
+    useEffect(() => {
+        if (propInitialAmount) {
+            setCustomAmount(propInitialAmount.toString());
+            setSelectedAmount(propInitialAmount);
+        }
+        if (propInitialDonationType) {
+            setDonationType(propInitialDonationType);
+        }
+    }, [propInitialAmount, propInitialDonationType]);
+
 
     // --- Effect to lock/unlock body scroll ---
     useEffect(() => {
@@ -83,7 +96,7 @@ export default function DonateOverlay() {
 
     if (!isOpen) return null;
 
-    const proseefinedAmounts = [90000, 50000, 25000, 10000, 6000, 5000];
+    const predefinedAmounts = [90000, 50000, 25000, 10000, 6000, 5000];
 
     return (
         <div className="fixed inset-0 bg-black/70 z-[1000] flex items-center justify-center p-4">
@@ -161,7 +174,7 @@ export default function DonateOverlay() {
 
                                 {/* Donation amount buttons */}
                                 <div className="grid grid-cols-3 gap-3 mb-4">
-                                    {proseefinedAmounts.map(amount => (
+                                    {predefinedAmounts.map(amount => (
                                         <button
                                             key={amount}
                                             onClick={() => handleAmountSelect(amount)}
@@ -185,19 +198,9 @@ export default function DonateOverlay() {
                                         onChange={handleCustomAmountChange}
                                         className="flex-1 px-3 py-2 outline-none rounded-l-md"
                                     />
-                                    <div className="relative">
-                                        <select
-                                            value={currency}
-                                            onChange={(e) => setCurrency(e.target.value)}
-                                            className="appearance-none bg-white border-l border-gray-300 pl-3 pr-8 py-2 rounded-r-md cursor-pointer outline-none"
-                                        >
-                                            <option value="KES">KES</option>
-                                            <option value="USD">USD</option>
-                                            <option value="EUR">EUR</option>
-                                        </select>
-                                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                            <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
-                                        </div>
+                                    {/* Removed currency selection dropdown */}
+                                    <div className="bg-white border-l border-gray-300 pl-3 pr-4 py-2 rounded-r-md text-gray-700 font-semibold">
+                                        KES
                                     </div>
                                 </div>
 
@@ -264,7 +267,7 @@ export default function DonateOverlay() {
                                         id="donorEmail"
                                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-1 focus:ring-rose-900"
                                         value={donorEmail}
-                                        onChange={(e) => setDonorEmail(e.target.checked ? '' : e.target.value)} // Clear email if anonymous
+                                        onChange={(e) => setDonorEmail(e.target.value)} // Don't clear email here, clear on anonymous check
                                         disabled={isAnonymous}
                                     />
                                 </div>

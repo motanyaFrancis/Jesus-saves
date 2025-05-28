@@ -1,21 +1,30 @@
 // components/ImpactPartnerSection.tsx
+'use client'
 
-import React from 'react';
+import React, { useState } from 'react';
+import { useDonateOverlay } from './DonateOverlayProvider'; // Assuming this path or adjust
 
 const ImpactPartnerSection: React.FC = () => {
+  const { open } = useDonateOverlay();
+  const [impactAmount, setImpactAmount] = useState<number>(600); // State for the editable amount
+
+  const handleDonateClick = () => {
+    open(impactAmount, 'monthly'); // Pass the amount and type to the overlay
+  };
+
   return (
     <section
       className="relative w-full min-h-[500px] bg-cover bg-center bg-no-repeat py-20 px-4 md:px-8 lg:px-16 flex items-center justify-center"
-      style={{ backgroundImage: "url('/images/hands_background.avif')" }} // Ensure you have this image in your public/images folder
+      style={{ backgroundImage: "url('/images/hands_background.avif')" }}
     >
-      <div className="absolute inset-0 bg-black opacity-60"></div> {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-black opacity-60"></div>
 
       <div className="relative max-w-7xl mx-auto z-10 flex flex-col lg:flex-row items-start justify-center max-w-7xl mx-auto gap-8">
         {/* Left Text Block */}
         <div className="w-full lg:w-1/2 text-white p-4">
           <p className="text-xl font-semibold mb-2">Become an</p>
           <h2 className="text-4xl font-bold mb-6 text-yellow-400">Impact Partner</h2>
-          <p className="text-lg leading-relaxed">
+          <p className="text-lg font-semibold leading-relaxed">
             When you become an Impact Partner through regular monthly giving, you join a mission that’s much larger
             than any one of us. You’re choosing to extend your reach far beyond what seems possible, directly into the
             lives of those who have yet to hear the message of Jesus. We dream of the day when the message of hope
@@ -35,10 +44,18 @@ const ImpactPartnerSection: React.FC = () => {
             <li>Every gift counts toward our goal of 1 billion souls reached by 2030.</li>
           </ul>
 
-          {/* Button */}
+          {/* Button with editable input */}
           <div className="mt-8 flex items-center space-x-4">
-            <span className="text-lg font-semibold">600</span>
-            <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-md shadow-lg transition-colors duration-200">
+            <input
+              type="number"
+              value={impactAmount}
+              onChange={(e) => setImpactAmount(parseFloat(e.target.value))}
+              className="w-24 p-2 rounded-md text-black text-right text-lg font-normal bg-white focus:outline-1 focus:outline-rose-600"
+            />
+            <button
+              onClick={handleDonateClick}
+              className="bg-yellow-500 hover:bg-yellow-600 text-gray-100 font-bold py-3 px-6 rounded-md shadow-lg transition-colors duration-200 "
+            >
               Give Monthly
             </button>
           </div>

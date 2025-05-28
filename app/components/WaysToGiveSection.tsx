@@ -4,13 +4,13 @@ import React from 'react';
 
 const WaysToGiveSection: React.FC = () => {
   return (
-    <section className="bg-rose-100 py-16 px-4 md:px-8 lg:px-16">
+    <section className="bg-rose-900 py-16 px-4 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto px-8">
-        <h1 className="text-4xl font-bold text-gray-800 mb-12 text-center md:text-left">Ways to give</h1>
+        <h1 className="text-4xl font-normal text-gray-50 mb-12 text-center md:text-left">Ways to <span className='font-semibold'>give</span></h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Card 1: To mail a check */}
-          <div className="bg-white p-8 rounded-lg shadow-md">
+          <div className="bg-white p-8 rounded-lg shadow-lg">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">To mail a check:</h2>
             <p className="text-gray-700 mb-4">
               We would be grateful to receive your check payable to &quot;<span className="font-bold">Hope Channel International, Inc.</span>&quot; at the following address:
@@ -24,7 +24,7 @@ const WaysToGiveSection: React.FC = () => {
           </div>
 
           {/* Card 2: To mail your donation */}
-          <div className="bg-white p-8 rounded-lg shadow-md">
+          <div className="bg-white p-8 rounded-lg shadow-lg">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">To mail your donation:</h2>
             <p className="text-gray-700 mb-4">
               Please complete this form and mail your gift to:
@@ -53,7 +53,7 @@ const WaysToGiveSection: React.FC = () => {
           </div>
 
           {/* Card 3: To donate by phone */}
-          <div className="bg-white p-8 rounded-lg shadow-md">
+          <div className="bg-white p-8 rounded-lg shadow-lg">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">To donate by phone:</h2>
             <p className="text-gray-700">
               Please call{' '}
@@ -68,7 +68,7 @@ const WaysToGiveSection: React.FC = () => {
           </div>
 
           {/* Card 4: Annuities and Planned Giving */}
-          <div className="bg-white p-8 rounded-lg shadow-md">
+          <div className="bg-white p-8 rounded-lg shadow-lg">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Annuities and Planned Giving:</h2>
             <p className="text-gray-700 mb-2">888-339-PLAN or 888-339-7526</p>
             <p className="text-gray-700 mb-2">
@@ -100,7 +100,7 @@ const WaysToGiveSection: React.FC = () => {
           </div>
 
           {/* Card 5: To send a bank transfer */}
-          <div className="bg-white p-8 rounded-lg shadow-md md:col-span-2"> {/* This card spans two columns on medium screens and up */}
+          <div className="bg-white p-8 rounded-lg shadow-lg md:col-span-2"> {/* This card spans two columns on medium screens and up */}
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">To send a bank transfer:</h2>
             <p className="text-gray-700">
               contact us at (301) 680-6020 or (888) 446-7388 Email:{' '}

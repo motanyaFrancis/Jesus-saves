@@ -3,6 +3,7 @@ import ImpactPartnerSection from '@/components/ImpactPartnerSection';
 import WaysToGiveSection from '@/app/components/WaysToGiveSection';
 import PageHeader from '@/components/PageHeaderSlim';
 import FaqsSection from '@/app/components/FaqsSection';
+import MetricsSection from '@/app/components/MetricsSection';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -32,6 +33,7 @@ const Schedule = () => {
                 breadcrumbs={breadcrumbs}
             />
             <DonationImpactSection />
+            <MetricsSection />
             <ImpactPartnerSection />
             <WaysToGiveSection />
             <FaqsSection />

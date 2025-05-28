@@ -1,8 +1,10 @@
 'use client'
 
 import React, { useState } from 'react';
+import { useDonateOverlay } from '@/components/DonateOverlayProvider'; // Assuming this path or adjust
 
 const DonationImpactSection: React.FC = () => {
+  const { open } = useDonateOverlay();
   const [donationType, setDonationType] = useState<'one-time' | 'monthly'>('one-time');
   const [selectedAmount, setSelectedAmount] = useState<number>(5000);
   const [customAmount, setCustomAmount] = useState<string>('5,000'); // Initialize with the default selected amount
@@ -28,11 +30,8 @@ const DonationImpactSection: React.FC = () => {
   };
 
   const handleDonate = () => {
-    // Here you would typically handle the donation logic,
-    // e.g., integrate with a payment gateway.
-    console.log('Donation Type:', donationType);
-    console.log('Donation Amount:', selectedAmount);
-    alert(`Thank you for your ${donationType} donation of KES ${selectedAmount.toLocaleString()}!`);
+    // Open the DonateOverlay with the current selected amount and donation type
+    open(selectedAmount, donationType === 'one-time' ? 'once' : 'monthly');
   };
 
   return (
@@ -89,8 +88,8 @@ const DonationImpactSection: React.FC = () => {
               key={amount.value}
               className={`py-3 px-2 rounded-md border text-sm font-semibold transition-colors duration-200 ${
                 selectedAmount === amount.value
-                  ? 'border-blue-600 bg-blue-50 text-blue-700'
-                  : 'border-gray-300 text-gray-700 hover:border-blue-400'
+                  ? 'border-rose-600 bg-rose-50 text-rose-700'
+                  : 'border-gray-300 text-gray-700 hover:border-rose-400'
               }`}
               onClick={() => handleAmountClick(amount.value)}
             >
@@ -103,7 +102,7 @@ const DonationImpactSection: React.FC = () => {
         <div className="relative mb-6">
           <input
             type="text" // Use text to allow for formatting
-            className="w-full p-3 pr-12 border border-gray-300 rounded-md text-lg font-semibold text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 pr-12 border border-gray-300 rounded-md text-lg font-semibold text-gray-800 focus:outline-none focus:ring-2 focus:ring-rose-500"
             value={customAmount}
             onChange={handleCustomAmountChange}
             onBlur={() => setCustomAmount(selectedAmount.toLocaleString())} // Reformat on blur
@@ -117,22 +116,19 @@ const DonationImpactSection: React.FC = () => {
           <input
             id="dedicate-donation"
             type="checkbox"
-            className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+            className="h-4 w-4 text-rose-600 focus:ring-rose-500 border-gray-300 rounded"
           />
           <label htmlFor="dedicate-donation" className="ml-2 text-sm text-gray-700">
             Dedicate this donation
           </label>
         </div>
 
-        {/* Add Comment Link (Placeholder) */}
-        <p className="text-sm text-blue-600 hover:underline cursor-pointer mb-6">Add comment</p>
-
         {/* Donate Button */}
         <button
-          className="w-full py-3 bg-yellow-500 text-white font-bold text-lg rounded-md hover:bg-yellow-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50"
-          onClick={handleDonate}
+            onClick={handleDonate} // Use the new handleDonate function
+            className="w-full bg-rose-900 hover:bg-yellow-600 text-white font-semibold py-5 rounded-sm shadow-md transition-colors duration-200 text-center uppercase"
         >
-          DONATE
+            Donate
         </button>
       </div>
     </section>
