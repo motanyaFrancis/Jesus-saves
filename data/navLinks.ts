@@ -31,6 +31,7 @@ const navLinks: NavLink[] = [
       },
     ],
   },
+  { name: 'Giving', href: '/giving' },
 ];
 
 export default navLinks;
