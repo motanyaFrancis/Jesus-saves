@@ -11,6 +11,20 @@ import {
   FaFacebookF,
 } from 'react-icons/fa6';
 
+const partners = [
+  {
+    name: 'Hope Channel Kenya',
+    href: '#',
+    logo: '/images/hope-channel.jpg',
+  },
+  {
+    name: 'Dawn of Faith',
+    href: '#',
+    logo: '/images/dawn-of-faith.jpg',
+  },
+];
+
+
 const Footer: React.FC = () => {
   return (
     <footer className="bg-white lg:grid lg:grid-cols-5 border-t border-gray-500/70">
@@ -105,6 +119,31 @@ const Footer: React.FC = () => {
                 </li>
               </ul>
             </div>
+            <div>
+              <p className="font-bold uppercase text-gray-900">Partners</p>
+
+              <ul className="mt-6 space-y-1 font-semibold text-sm">
+                {partners.map((partner) => (
+                  <li key={partner.name}>
+                    <Link
+                      href={partner.href}
+                      className="flex items-center space-x-3 text-gray-700 transition hover:opacity-75"
+                    >
+                      <Image
+                        src={partner.logo}
+                        alt={`${partner.name} logo`}
+                        width={60}
+                        height={60}
+                        className="object-contain"
+                      />
+                      <span>{partner.name}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+
           </div>
         </div>
 
