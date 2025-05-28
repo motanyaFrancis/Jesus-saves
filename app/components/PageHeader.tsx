@@ -81,9 +81,8 @@ const PageHeader: React.FC<PageHeaderProps> = ({
                             <Image
                                 src={imageUrl}
                                 alt={imageAlt}
-                                layout="fill" // Use layout="fill" for responsive images
-                                objectFit="cover" // Cover the area, cropping if necessary
-                                className="rounded-lg"
+                                fill 
+                                className="rounded-lg object-cover"
                             />
                             {/* Overlay for dynamic text like "IN-VERSE" */}
                             <div className="absolute top-0 left-0 right-0 p-4 bg-gradient-to-b from-black/60 to-transparent text-white flex justify-between items-center">

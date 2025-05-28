@@ -56,3 +56,13 @@ body {
     }
   }
 }
+
+#nprogress .bar {
+  background: #ff2056; /* Tailwind blue-500 */
+  height: 4px;
+  z-index: 9999;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #ff2056, 0 0 5px #ff2056;
+}

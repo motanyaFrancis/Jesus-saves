@@ -7,6 +7,7 @@ import ProgramInfoSection from '@/components/ProgramInfoSection';
 import { showDetailsMap } from '@/data/showDetails';
 import { Metadata } from 'next';
 
+
 // CRITICAL FIX: Update the PageProps interface definition
 // params is now expected to be a Promise<object> by Next.js 15's types.
 interface PageProps {

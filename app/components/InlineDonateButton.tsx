@@ -24,7 +24,7 @@ export default function InlineDonateButton({
                 className
             )}
         >
-            <span className="flex items-center gap-2 font-bold relative z-10">
+            <span className="flex justify-center items-center gap-2 font-bold relative z-10">
 
                 <FaHeart className="w-4 h-4 text-white animate-pulse" />
                 {/* <Heart className="w-4 h-4 text-white font-bold animate-pulse" /> */}
