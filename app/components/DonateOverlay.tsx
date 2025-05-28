@@ -12,7 +12,7 @@ export default function DonateOverlay() {
     const [customAmount, setCustomAmount] = useState(propInitialAmount ? propInitialAmount.toString() : '5000');
     const [selectedAmount, setSelectedAmount] = useState<number | null>(propInitialAmount || 5000);
     const [donationType, setDonationType] = useState<'once' | 'monthly'>(propInitialDonationType || 'once');
-    const [currency, setCurrency] = useState('KES'); // Default currency, now fixed to KES
+    const [currency] = useState('KES'); // Default currency, now fixed to KES
 
     // State for the 'details' step
     const [donorName, setDonorName] = useState('');
