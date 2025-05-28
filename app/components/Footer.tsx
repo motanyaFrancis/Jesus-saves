@@ -53,9 +53,9 @@ const Footer: React.FC = () => {
             </p> */}
 
             <ul className="mt-8 space-y-1 text-sm font-medium text-gray-700">
-              <li>Dates: 6th - 18th July 2025</li>
-              <li>Sunday to Friday: 6:00pm - 8:00pm</li>
-              <li>Sarturday: 8:00am - 6:00pm</li>
+              <li>Dates: 6th - 19th July 2025</li>
+              <li>Sunday to Friday: 3:00pm - 8:30pm</li>
+              <li>Sarturday: 8:00am - 4:00pm</li>
             </ul>
 
             <ul className="mt-8 flex gap-6 text-rose-900">
