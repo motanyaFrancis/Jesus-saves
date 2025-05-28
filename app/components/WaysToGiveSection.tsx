@@ -13,7 +13,7 @@ const WaysToGiveSection: React.FC = () => {
           <div className="bg-white p-8 rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">To mail a check:</h2>
             <p className="text-gray-700 mb-4">
-              We would be grateful to receive your check payable to "<span className="font-bold">Hope Channel International, Inc.</span>" at the following address:
+              We would be grateful to receive your check payable to &quot;<span className="font-bold">Hope Channel International, Inc.</span>&quot; at the following address:
             </p>
             <p className="text-gray-700 mb-2">Hope Channel International</p>
             <p className="text-gray-700 mb-2">PO Box 4000</p>
