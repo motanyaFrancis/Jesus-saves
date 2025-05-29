@@ -43,11 +43,9 @@ const DonationImpactSection: React.FC = () => {
         <h2 className="text-xl font-bold text-gray-700 mb-4">Your impact around the world</h2>
 
         <ul className="list-disc list-inside text-gray-600 space-y-2 font-bold text-base">
-          <li>In Malawi, 25 televisions now bring light to prison cells.</li>
-          <li>In Kenya, 194,000 new baptisms have sparked a wave of faith.</li>
-          <li>In New Zealand, Hope Channel stands as a top Christian channel.</li>
-          <li>In Kinshasa, a new studio offers the love of God to millions.</li>
-          <li>Globally, Hope Channel is illuminating hope through 83 channels in over 100 languages.</li>
+          <li>Butere, 2023: A new church was planted following a successful evangelistic campaign.</li>
+          <li>Kisii & Kilgoris, 2024: Medical camps and evangelism led to significant spiritual and health transformations.</li>
+          <li>Mutitu wa Ndooa, May 2025: Mission support enabled the opening of a new Sabbath school.</li>
         </ul>
       </div>
 

@@ -25,12 +25,7 @@ const ImpactPartnerSection: React.FC = () => {
           <p className="text-xl font-semibold mb-2">Become an</p>
           <h2 className="text-4xl font-bold mb-6 text-yellow-400">Impact Partner</h2>
           <p className="text-lg font-semibold leading-relaxed">
-            When you become an Impact Partner through regular monthly giving, you join a mission that’s much larger
-            than any one of us. You’re choosing to extend your reach far beyond what seems possible, directly into the
-            lives of those who have yet to hear the message of Jesus. We dream of the day when the message of hope
-            will be accessible to every person in the world, in their language. Your consistent support fuels our mission to
-            share the message of eternal hope across 900 TV stations and numerous digital platforms, making a
-            meaningful impact on a global scale.
+            Become an Impact Partner today through regular monthly giving and join a mission that reaches far beyond what's possible alone. Your consistent support helps us share the message of Jesus and eternal hope through our radio station, streaming platforms, and music studio, making a powerful impact. You're helping us reach our dream: for every person to access the message of hope and experience its transforming power.
           </p>
         </div>
 
@@ -38,10 +33,10 @@ const ImpactPartnerSection: React.FC = () => {
         <div className="w-full lg:w-1/2 text-white p-4">
           <h3 className="text-xl font-semibold mb-4 text-yellow-400">Your Partnership Brings Transformation:</h3>
           <ul className="list-disc list-inside space-y-3 text-lg">
-            <li>Directly influence the spread of the gospel in over 100 languages.</li>
-            <li>Receive updates showcasing the real stories of lives you’ve helped transform.</li>
-            <li>Stand with us in prayer for the people whose lives are being renewed by hope.</li>
-            <li>Every gift counts toward our goal of 1 billion souls reached by 2030.</li>
+            <li>Directly influence the spread of the gospel in Kenya and beyond.</li>
+            <li>Receive updates showcasing the real stories of lives you’ve helped transform in places like Butere, Kisii, Kilgoris, and Mutitu wa Ndooa.</li>
+            <li>Stand with us in prayer for the people whose lives are being renewed by hope and healing.</li>
+            <li>Every gift counts towards our ongoing mission to bring spiritual and holistic well-being to communities.</li>
           </ul>
 
           {/* Button with editable input */}

@@ -15,43 +15,43 @@ const faqs: FaqItem[] = [
     id: 1,
     question: 'Can I make a donation over the phone?',
     answer:
-      'Yes, you can make a donation over the phone by calling our toll-free number at 1-888-446-7388. Our team is available to assist you with your donation.',
+      'Yes, you can make a donation over the phone by calling our local number at **[Your Phone Number Here]**. Our team is ready to assist you with your donation.',
   },
   {
     id: 2,
     question: 'Can I mail a check donation?',
     answer:
-      'Absolutely. You can mail your check payable to "Hope Channel International, Inc." to: PO Box 4000, Silver Spring, MD 20914-6002 USA. Please include your name and address for a receipt.',
+      'Absolutely. You can mail your check payable to SDA Karen Community Trust to: P.O Box 15973 - 00502 Karen, Nairobi, Mukoma Road. Please include your name and address so we can send you a receipt.',
   },
   {
     id: 3,
-    question: 'I would prefer to not share my information online; is there a form I can fill out to send my donation?',
+    question: 'I would prefer not to share my information online; is there a form I can fill out to send my donation?',
     answer:
-      'Yes, we understand your preference. You can download and print a donation form from our website, fill it out, and mail it to us along with your donation. The form is available in the "Ways to Give" section.',
+      'Yes, we understand. You can download and print a donation form from our website in the "[Specific Section Name, e.g., Ways to Give or Support Us]" section. Fill it out and mail it to us along with your donation.',
   },
   {
     id: 4,
     question: 'Can I cancel my monthly donation?',
     answer:
-      'Yes, you can cancel your monthly donation at any time. Please contact our donor relations team by phone at 1-888-446-7388 or email at fundraising@hopetv.org, and we will assist you with the cancellation.',
+      'Yes, you can cancel your monthly donation at any time. Please contact our donor relations team by phone at **[Your Phone Number Here]** or email at **[Your Email Address Here]**, and we will gladly assist you with the cancellation.',
   },
   {
     id: 5,
     question: 'Can I update my Credit Card information?',
     answer:
-      'To update your credit card information, please call our donor relations team at 1-888-446-7388. For security reasons, we do not recommend sending credit card details via email.',
+      'To update your credit card information, please call our donor relations team at **[Your Phone Number Here]**. For your security, we do not recommend sending credit card details via email.',
   },
   {
     id: 6,
-    question: 'What is Hope Channel’s Tax Identification Number?',
+    question: 'What is SDA Karen Community Trust\'s legal status/identification?',
     answer:
-      'Hope Channel International, Inc. is a 501(c)(3) non-profit organization. Our Tax Identification Number (EIN) can be provided upon request for tax purposes. Please contact us directly for this information.',
+      'SDA Karen Community Trust is a registered Trust [mention your legal status, e.g., registered under Kenyan law]. Our registration number can be provided upon request. Please contact us directly for this information.',
   },
   {
     id: 7,
-    question: 'I don’t see my question answered and need further assistance with my donation, who can I contact?',
+    question: 'I don’t see my question answered and need further assistance with my donation; whom can I contact?',
     answer:
-      'If your question is not answered here or if you need further assistance, please feel free to contact our dedicated donor relations team. You can reach us by phone at 1-888-446-7388 or via email at fundraising@hopetv.org. We are happy to help!',
+      'If your question isn’t answered here or if you need further assistance, please feel free to contact our dedicated donor relations team. You can reach us by phone at **[Your Phone Number Here]** or via email at **[Your Email Address Here]**. We are happy to help!',
   },
 ];
 
