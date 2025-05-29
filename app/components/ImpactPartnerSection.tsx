@@ -25,7 +25,7 @@ const ImpactPartnerSection: React.FC = () => {
           <p className="text-xl font-semibold mb-2">Become an</p>
           <h2 className="text-4xl font-bold mb-6 text-yellow-400">Impact Partner</h2>
           <p className="text-lg font-semibold leading-relaxed">
-            Become an Impact Partner today through regular monthly giving and join a mission that reaches far beyond what's possible alone. Your consistent support helps us share the message of Jesus and eternal hope through our radio station, streaming platforms, and music studio, making a powerful impact. You're helping us reach our dream: for every person to access the message of hope and experience its transforming power.
+            Become an Impact Partner today through regular monthly giving and join a mission that reaches far beyond what&apos;s possible alone. Your consistent support helps us share the message of Jesus and eternal hope through our radio station, streaming platforms, and music studio, making a powerful impact. You&apos;re helping us reach our dream: for every person to access the message of hope and experience its transforming power.
           </p>
         </div>
 
