@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: '%s | Jesus Saves',
     default: 'Jesus Saves',
   },
-  description: "Preach to all Nationa",
+  description: "Discover our latest program on Jesus Saves.",
 };
 
 export default function RootLayout({

@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const show = allShows.find((s) => s.slug === slug);
 
     return {
-        title: show ? `${show.title} - Jesus Saves` : 'Show Not Found',
+        title: show ? `${show.title} - Home` : 'Show Not Found',
         description: show?.description ?? 'Discover our latest program on Jesus Saves.',
     };
 }
