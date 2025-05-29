@@ -19,7 +19,7 @@ export const allShows: Show[] = [
     slug: 'jesus-saves',
     title: 'Jesus Saves',
     subtitle: 'Uplifting messages of hope, redemption, and salvation through Jesus Christ.',
-    description: 'Uplifting messages of hope, redemption, and salvation through Jesus Christ.',
+    description: 'Dive into powerful messages that illuminate the path to hope, redemption, and eternal salvation through the unwavering love and grace of Jesus Christ. This series offers profound insights and transformative truths, designed to inspire and strengthen your faith journey.',
     imageUrl: '/images/sample.avif',
     imageAlt: 'Pastor preaching to a congregation',
     imageOverlayText: 'Salvation',
