@@ -16,7 +16,7 @@ export interface Show {
 
 export const allShows: Show[] = [
   {
-    slug: 'jesus-savas',
+    slug: 'jesus-saves',
     title: 'Jesus Saves',
     subtitle: 'Uplifting messages of hope, redemption, and salvation through Jesus Christ.',
     description: 'Uplifting messages of hope, redemption, and salvation through Jesus Christ.',
@@ -28,7 +28,7 @@ export const allShows: Show[] = [
         imageSrc: '/images/sample.avif',
         imageAlt: 'Pastor preaching to a congregation',
         title: 'Jesus Saves',
-        slug: 'jesus-savas',
+        slug: 'jesus-saves',
       },
     ],
   },
