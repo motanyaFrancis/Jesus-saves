@@ -34,7 +34,7 @@ export const allShows: Show[] = [
   },
   {
     slug: 'family-hub',
-    title: 'Family Hub',
+    title: 'Family Hub - Podcast',
     subtitle: 'Faith-centered content for growing and nurturing family life.',
     description: 'Through engaging, informative, and spiritual discussions about issues facing todayʼs families, Real Family Talk seeks to strengthen families and inspire hope. In each edition, the Olivers draw from their pastoral, educational, and counseling experience to navigate discussions about family life, approaching each topic with practical solutions and sound biblical principles.',
     imageUrl: '/images/jesus-saves.jpg',
@@ -44,7 +44,7 @@ export const allShows: Show[] = [
       {
         imageSrc: '/images/jesus-saves.jpg',
         imageAlt: 'Family gathering around a Bible',
-        title: 'Family Hub',
+        title: 'Family Hub - Podcast',
         slug: 'family-hub',
       },
     ],
