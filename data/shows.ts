@@ -16,7 +16,7 @@ export interface Show {
 
 export const allShows: Show[] = [
   {
-    slug: 'jesus-saves',
+    slug: 'jesus-savas',
     title: 'Jesus Saves',
     subtitle: 'Uplifting messages of hope, redemption, and salvation through Jesus Christ.',
     description: 'Uplifting messages of hope, redemption, and salvation through Jesus Christ.',
@@ -28,7 +28,7 @@ export const allShows: Show[] = [
         imageSrc: '/images/sample.avif',
         imageAlt: 'Pastor preaching to a congregation',
         title: 'Jesus Saves',
-        slug: 'jesus-saves',
+        slug: 'jesus-savas',
       },
     ],
   },
@@ -66,12 +66,12 @@ export const allShows: Show[] = [
       },
     ],
   },
-  
+
   {
     slug: 'faith-and-harmony',
     title: 'Faith and Harmony',
-    subtitle: 'Experience spiritual inspiration through music and praise.',
-    description: 'Join hosts Breath of praise in this series The Book of Daniel. Each episode will take you through a one-hour Bible study in song. Listen to stories and scripture as our hosts explore the different attributes of God&apos;s character of love, and how these attributes connect to doctrinal teachings.',
+    subtitle: 'Uplifting melodies and spiritual insights.',
+    description: 'Immerse yourself in a harmonious blend of music and faith. Explore how melodies can deepen your spiritual connection and bring peace to your soul. This show offers a refreshing journey through hymns, contemporary worship, and inspiring testimonies, all designed to uplift and encourage your spirit.',
     imageUrl: '/images/sample.avif',
     imageAlt: 'People singing and playing instruments',
     imageOverlayText: 'Worship',
@@ -87,8 +87,8 @@ export const allShows: Show[] = [
   {
     slug: 'breath-of-praise',
     title: 'Breath of Praise',
-    subtitle: 'Experience spiritual inspiration through music and praise.',
-    description: 'Join hosts Breath of praise in this series The Book of Daniel. Each episode will take you through a one-hour Bible study in song. Listen to stories and scripture as our hosts explore the different attributes of God&apos;s character of love, and how these attributes connect to doctrinal teachings.',
+    subtitle: 'Inspirational music to uplift your spirit.',
+    description: 'Experience the power of praise and worship through song. "Breath of Praise" brings you a curated selection of gospel music, spiritual hymns, and contemporary Christian tunes that will refresh your mind, body, and soul. Let the music be a breath of fresh air, filling you with hope and inspiration.',
     imageUrl: '/images/sample.avif',
     imageAlt: 'People singing and playing instruments',
     imageOverlayText: 'Worship',
@@ -104,11 +104,11 @@ export const allShows: Show[] = [
   {
     slug: 'salvation-stories',
     title: 'Salvation Stories',
-    subtitle: 'Experience spiritual inspiration through music and praise.',
-    description: 'Join hosts Breath of praise in this series The Book of Daniel. Each episode will take you through a one-hour Bible study in song. Listen to stories and scripture as our hosts explore the different attributes of God&apos;s character of love, and how these attributes connect to doctrinal teachings.',
+    subtitle: 'Testimonies of transformation and divine encounters.',
+    description: 'Hear powerful and personal accounts of salvation and redemption. Each episode shares inspiring journeys of individuals whose lives have been transformed by faith. Discover the hope and new beginnings found through divine intervention and unwavering belief.',
     imageUrl: '/images/sample.avif',
     imageAlt: 'People singing and playing instruments',
-    imageOverlayText: 'Worship',
+    imageOverlayText: 'Salvation',
     dailyHighlights: [
       {
         imageSrc: '/images/sample.avif',
