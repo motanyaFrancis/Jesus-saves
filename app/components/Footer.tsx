@@ -23,12 +23,12 @@ const partners = [
     logo: '/images/hope-africa.png',
   },
   {
-    name: '2CBN',
+    name: '2nd Coming Broadcasting Network',
     href: '#',
     logo: '/images/2cbn.png',
   },
   {
-    name: 'Dawn of Faith',
+    name: 'Dawn of Faith TV',
     href: '#',
     logo: '/images/dawn-of-faith.jpg',
   },
