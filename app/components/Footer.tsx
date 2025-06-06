@@ -18,6 +18,16 @@ const partners = [
     logo: '/images/hope-channel.jpg',
   },
   {
+    name: 'Hope Channel Africa',
+    href: '#',
+    logo: '/images/hope-africa.png',
+  },
+  {
+    name: '2CBN',
+    href: '#',
+    logo: '/images/2cbd.png',
+  },
+  {
     name: 'Dawn of Faith',
     href: '#',
     logo: '/images/dawn-of-faith.jpg',
@@ -122,18 +132,18 @@ const Footer: React.FC = () => {
             <div>
               <p className="font-bold uppercase text-gray-900">Partners</p>
 
-              <ul className="mt-6 space-y-1 font-semibold text-sm">
+              <ul className="mt-6 space-y-1 font-semibold text-xs">
                 {partners.map((partner) => (
                   <li key={partner.name}>
                     <Link
                       href={partner.href}
-                      className="flex items-center space-x-3 text-gray-700 transition hover:opacity-75"
+                      className="flex items-center space-x-2 text-gray-700 transition hover:opacity-75"
                     >
                       <Image
                         src={partner.logo}
                         alt={`${partner.name} logo`}
-                        width={60}
-                        height={60}
+                        width={45}
+                        height={45}
                         className="object-contain"
                       />
                       <span>{partner.name}</span>
