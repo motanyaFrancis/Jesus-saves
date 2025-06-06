@@ -25,7 +25,7 @@ const partners = [
   {
     name: '2CBN',
     href: '#',
-    logo: '/images/2cbd.png',
+    logo: '/images/2cbn.png',
   },
   {
     name: 'Dawn of Faith',
