@@ -84,7 +84,7 @@ export const dailyScheduleData: ScheduleItem[] = [
   {
     startTime: '19:40',
     endTime: '19:50',
-    title: 'Testimonies',
+    title: 'Salvation Stories',
     description: 'Hear inspiring personal stories of faith, healing, and overcoming challenges. Witness the power of God\'s grace in real lives.',
     duration: '10 min',
     mediaSrc: '/images/sample.avif',

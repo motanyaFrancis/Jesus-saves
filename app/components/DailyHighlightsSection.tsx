@@ -60,8 +60,8 @@ const DailyHighlightsSection: React.FC<DailyHighlightsSectionProps> = ({ highlig
   return (
     <section className="py-12 mt-12 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-xl font-semibold uppercase text-gray-900 text-left mb-6">
-          Daily Highlights
+        <h2 className="text-xl font-black uppercase text-gray-900 text-left mb-6">
+          Shows
         </h2>
 
         {highlights.length === 0 ? (
