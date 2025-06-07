@@ -19,7 +19,7 @@ export const showDetailsMap: Record<string, ShowDetails> = {
       { name: 'Eld. Maangi Mitiambo', imageUrl: '/images/pp.png', title: 'Family-Life leader' },
     ]
   },
-  'jesus-saves': {
+  'the-living-word': {
     host: [{ name: 'Pr. Jacob Akali', imageUrl: '/images/pp.png', title: 'Host' },]
   },
   'faith-and-harmony': {
