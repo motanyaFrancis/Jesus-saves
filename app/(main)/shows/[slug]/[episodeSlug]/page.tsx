@@ -23,7 +23,11 @@ export async function generateStaticParams() {
 }
 
 // Metadata
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: PageProps['params'];
+}): Promise<Metadata> {
   const { slug, episodeSlug } = params;
 
   const episode = getEpisodeBySlug(slug, episodeSlug);
