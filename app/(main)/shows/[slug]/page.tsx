@@ -14,7 +14,7 @@ import { Metadata } from 'next';
 // CRITICAL FIX: Update the PageProps interface definition
 // params is now expected to be a Promise<object> by Next.js 15's types.
 interface PageProps {
-    params: Promise<{ slug: string }>; // This is the change you need to ensure is present
+    params: { slug: string };
 }
 
 
@@ -26,7 +26,7 @@ export async function generateStaticParams() {
 // Metadata generation
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     // You MUST await params here to deconstruct it
-    const { slug } = await params;
+    const { slug } = params;
 
     const show = allShows.find((s) => s.slug === slug);
 
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 // Main page
 const ShowPage = async ({ params }: PageProps) => {
     // And you MUST await params here too
-    const { slug } = await params;
+    const { slug } =  params;
 
     const show = allShows.find((s) => s.slug === slug);
     const extras = showDetailsMap[slug];
