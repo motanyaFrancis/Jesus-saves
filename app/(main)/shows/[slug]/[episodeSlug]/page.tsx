@@ -6,12 +6,12 @@ import EpisodeList from '@/components/EpisodeList';
 import VideoPlayer from '@/components/VideoPlayer';
 
 // Define the expected props for the page component
-interface EpisodePageProps {
-  params: {
-    slug: string;
-    episodeSlug: string;
-  };
-}
+// interface EpisodePageProps {
+//   params: {
+//     slug: string;
+//     episodeSlug: string;
+//   };
+// }
 
 // Generate static paths for all episodes
 export async function generateStaticParams() {
@@ -51,7 +51,11 @@ export async function generateMetadata({
 }
 
 // Page component
-export default async function EpisodePage({ params }: EpisodePageProps) {
+export default async function EpisodePage({
+  params,
+}: {
+  params: { slug: string; episodeSlug: string };
+}) {
   const { slug, episodeSlug } = params;
 
   const episode = getEpisodeBySlug(slug, episodeSlug);
