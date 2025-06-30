@@ -1,19 +1,19 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Metadata } from 'next';
+
 import { getEpisodeBySlug, getEpisodesByShowSlug } from '@/lib/episode-utils';
 import EpisodeList from '@/components/EpisodeList';
 import VideoPlayer from '@/components/VideoPlayer';
 
-// Define the expected props for the page component
-// interface EpisodePageProps {
-//   params: {
-//     slug: string;
-//     episodeSlug: string;
-//   };
-// }
+interface PageProps {
+  params: {
+    slug: string;
+    episodeSlug: string;
+  };
+}
 
-// Generate static paths for all episodes
+// Static params
 export async function generateStaticParams() {
   const allEpisodes = (await import('@/data/episodes')).allEpisodes;
   return allEpisodes.map((episode) => ({
@@ -22,12 +22,8 @@ export async function generateStaticParams() {
   }));
 }
 
-// Generate dynamic metadata for SEO
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string; episodeSlug: string };
-}): Promise<Metadata> {
+// Metadata
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug, episodeSlug } = params;
 
   const episode = getEpisodeBySlug(slug, episodeSlug);
@@ -50,18 +46,13 @@ export async function generateMetadata({
   };
 }
 
-// Page component
-export default async function EpisodePage({
-  params,
-}: {
-  params: { slug: string; episodeSlug: string };
-}) {
+// Main page
+export default async function EpisodePage({ params }: PageProps) {
   const { slug, episodeSlug } = params;
 
   const episode = getEpisodeBySlug(slug, episodeSlug);
 
   if (!episode) {
-    console.warn(`Missing episode data for slug: ${episodeSlug}`);
     return notFound();
   }
 
