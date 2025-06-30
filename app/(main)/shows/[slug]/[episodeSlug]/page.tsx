@@ -60,8 +60,6 @@ const EpisodePage = async ({ params }: EpisodePageProps) => {
     (ep) => ep.slug !== episodeSlug
   );
 
-  const thumbnailUrl =
-    episode.thumbnailUrl || 'https://placehold.co/1280x720?text=Video+Unavailable';
 
   const breadcrumbs = [
     { name: 'Home', href: '/' },
