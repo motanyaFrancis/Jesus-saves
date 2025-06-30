@@ -6,6 +6,7 @@ import DonateOverlay from '@/components/DonateOverlay';
 import VerticalDonateButton from '@/components/VerticalDonateButton';
 import TopProgressBar from '@/components/TopProgressBar';
 
+// Fonts
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -16,7 +17,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Dynamically resolve metadataBase
+const siteUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://jesus-saves.sdackc.org" 
+    : "http://localhost:3000";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     template: '%s | Jesus Saves',
     default: 'Jesus Saves',
@@ -34,7 +42,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white p-0`}>
         <TopProgressBar />
         <DonateOverlayProvider>
-        <VerticalDonateButton />
+          <VerticalDonateButton />
           {children}
           <DonateOverlay />
         </DonateOverlayProvider>

@@ -5,6 +5,9 @@ import { allShows } from '@/data/shows';
 import PageHeader from '@/components/PageHeader';
 import ProgramInfoSection from '@/components/ProgramInfoSection';
 import { showDetailsMap } from '@/data/showDetails';
+import { getEpisodesByShowSlug } from '@/lib/episode-utils';
+import { Episode } from '@/lib/types';
+import EpisodeList from '@/components/EpisodeList';
 import { Metadata } from 'next';
 
 
@@ -13,6 +16,7 @@ import { Metadata } from 'next';
 interface PageProps {
     params: Promise<{ slug: string }>; // This is the change you need to ensure is present
 }
+
 
 // Static params
 export async function generateStaticParams() {
@@ -51,6 +55,8 @@ const ShowPage = async ({ params }: PageProps) => {
         { name: show.title, href: `/shows/${show.slug}` },
     ];
 
+    const episodes: Episode[] = getEpisodesByShowSlug(slug);
+
     return (
         <main className="pt-24">
             <PageHeader
@@ -62,6 +68,17 @@ const ShowPage = async ({ params }: PageProps) => {
                 breadcrumbs={breadcrumbs}
                 imageOverlayText={show.imageOverlayText}
             />
+            {episodes.length > 0 && (
+                <section className="max-w-7xl mx-auto py-8 px-4">
+                    <h2 className="text-xl font-bold mb-6 text-center md:text-left uppercase">Episodes</h2>
+                    <EpisodeList episodes={episodes} showSlug={show.slug} />
+                </section>
+            )}
+            {episodes.length === 0 && (
+                <section className="container mx-auto py-8 px-4 text-center text-gray-600">
+                    <p>No episodes available for this show yet. Check back soon!</p>
+                </section>
+            )}
             <ProgramInfoSection show={show} host={extras.host} panelists={extras.panelists} />
         </main>
     );

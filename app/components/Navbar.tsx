@@ -18,7 +18,7 @@ export default function Navbar() {
                 onMouseLeave={() => setHoveredDropdown(null)}
                 className={`fixed top-0 w-full z-[998] backdrop-blur bg-white/80 transition-colors duration-200 ${hoveredDropdown ? 'bg-primary-900/90' : 'shadow-lg'}`}
             >
-                <nav className="py-5 border-b border-white/10 container mx-auto px-4 flex items-center justify-between">
+                <nav className="py-5 border-b border-white/10 container max-w-7xl mx-auto px-4 flex items-center justify-between">
                     <Link href="/">
                         <Image src="/images/logo.png" alt="Logo" width={60} height={60} />
                     </Link>
