@@ -50,6 +50,7 @@ export async function generateMetadata({
   };
 }
 
+
 // Page component
 const EpisodePage = async ({ params }: EpisodePageProps) => {
   const { slug, episodeSlug } = params;
