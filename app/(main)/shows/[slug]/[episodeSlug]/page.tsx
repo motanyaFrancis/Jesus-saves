@@ -1,5 +1,3 @@
-// app/shows/[slug]/[episodeSlug]/page.tsx
-
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -7,10 +5,6 @@ import { Metadata } from 'next';
 import { getEpisodeBySlug, getEpisodesByShowSlug } from '@/lib/episode-utils';
 import EpisodeList from '@/components/EpisodeList';
 import VideoPlayer from '@/components/VideoPlayer';
-
-interface EpisodePageProps {
-  params: { slug: string; episodeSlug: string };
-}
 
 // Generate static paths for all episodes
 export async function generateStaticParams() {
@@ -22,7 +16,6 @@ export async function generateStaticParams() {
 }
 
 // Generate dynamic metadata for SEO
-
 export async function generateMetadata({
   params,
 }: {
@@ -50,9 +43,12 @@ export async function generateMetadata({
   };
 }
 
-
 // Page component
-const EpisodePage = async ({ params }: EpisodePageProps) => {
+export default async function EpisodePage({
+  params,
+}: {
+  params: { slug: string; episodeSlug: string };
+}) {
   const { slug, episodeSlug } = params;
 
   const episode = getEpisodeBySlug(slug, episodeSlug);
@@ -66,7 +62,6 @@ const EpisodePage = async ({ params }: EpisodePageProps) => {
     (ep) => ep.slug !== episodeSlug
   );
 
-
   const breadcrumbs = [
     { name: 'Home', href: '/' },
     { name: slug.replace(/-/g, ' '), href: `/shows/${slug}` },
@@ -75,13 +70,12 @@ const EpisodePage = async ({ params }: EpisodePageProps) => {
 
   return (
     <>
-
-      {/* Breadcrumbs OUTSIDE the flex container */}
-
       <div className="bg-gray-100 pt-24 mt-4">
-
-        {breadcrumbs && breadcrumbs.length > 0 && (
-          <nav className="text-sm font-bold text-gray-500 mb-4 max-w-7xl mx-auto py-4" aria-label="Breadcrumb">
+        {breadcrumbs.length > 0 && (
+          <nav
+            className="text-sm font-bold text-gray-500 mb-4 max-w-7xl mx-auto py-4"
+            aria-label="Breadcrumb"
+          >
             <ol className="list-none p-0 inline-flex">
               {breadcrumbs.map((crumb, index) => (
                 <li key={crumb.href} className="flex items-center">
@@ -111,14 +105,12 @@ const EpisodePage = async ({ params }: EpisodePageProps) => {
 
       <main className="pt-6 bg-white">
         <div className="container mx-auto p-4 max-w-5xl">
-
-          {/* Video / Thumbnail */}
           <VideoPlayer url={episode.videoUrl} title={episode.title} />
 
-          {/* Title and Info */}
-          <h1 className="text-xl md:text-2xl font-bold mb- 4 text-gray-900">
+          <h1 className="text-xl md:text-2xl font-bold mb-4 text-gray-900">
             {episode.title}
           </h1>
+
           <div className="text-gray-600 text-sm mb-6 flex items-center space-x-2">
             <span>Published on</span>
             <time dateTime={episode.publishedAt}>
@@ -137,15 +129,10 @@ const EpisodePage = async ({ params }: EpisodePageProps) => {
             </Link>
           </div>
 
-
-
-
-          {/* Description */}
           <div className="prose lg:prose-lg max-w-none text-gray-800 leading-relaxed">
             <p>{episode.description}</p>
           </div>
 
-          {/* Related Episodes */}
           <section className="mt-12 pt-8 border-t border-gray-200">
             <h2 className="text-2xl font-bold mb-6 text-gray-900">More from this Show</h2>
             {relatedEpisodes.length > 0 ? (
@@ -158,6 +145,4 @@ const EpisodePage = async ({ params }: EpisodePageProps) => {
       </main>
     </>
   );
-};
-
-export default EpisodePage;
+}
