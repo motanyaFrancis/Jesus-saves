@@ -1,10 +1,17 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Metadata } from 'next';
-
 import { getEpisodeBySlug, getEpisodesByShowSlug } from '@/lib/episode-utils';
 import EpisodeList from '@/components/EpisodeList';
 import VideoPlayer from '@/components/VideoPlayer';
+
+// Define the expected props for the page component
+interface EpisodePageProps {
+  params: {
+    slug: string;
+    episodeSlug: string;
+  };
+}
 
 // Generate static paths for all episodes
 export async function generateStaticParams() {
@@ -44,11 +51,7 @@ export async function generateMetadata({
 }
 
 // Page component
-export default async function EpisodePage({
-  params,
-}: {
-  params: { slug: string; episodeSlug: string };
-}) {
+export default async function EpisodePage({ params }: EpisodePageProps) {
   const { slug, episodeSlug } = params;
 
   const episode = getEpisodeBySlug(slug, episodeSlug);
