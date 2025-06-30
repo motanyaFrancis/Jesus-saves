@@ -3,16 +3,16 @@ import { Episode } from '@/lib/types'; // Import the interface
 
 export const allEpisodes: Episode[] = [
   // The Living Word (only episode 1 available)
-  {
-    slug: 'living-word-episode-1',
-    showSlug: 'the-living-word',
-    title: 'Hope in the Storm',
-    description: 'Discover how faith in Christ can anchor you during life’s storms.',
-    videoUrl: '/images/sample.avif',
-    thumbnailUrl: '/images/sample.avif',
-    thumbnailAlt: 'Pastor preaching with open Bible',
-    publishedAt: '2025-06-01',
-  },
+  // {
+  //   slug: 'living-word-episode-1',
+  //   showSlug: 'the-living-word',
+  //   title: 'Hope in the Storm',
+  //   description: 'Discover how faith in Christ can anchor you during life’s storms.',
+  //   videoUrl: '/images/sample.avif',
+  //   thumbnailUrl: '/images/sample.avif',
+  //   thumbnailAlt: 'Pastor preaching with open Bible',
+  //   publishedAt: '2025-06-01',
+  // },
 
   // Family Hub Episodes (14)
   ...[...Array(14)].map((_, i) => {

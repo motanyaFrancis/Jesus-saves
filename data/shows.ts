@@ -19,7 +19,7 @@ export const allShows: Show[] = [
     slug: 'the-living-word',
     title: 'The Living Word',
     subtitle: 'Uplifting messages of hope, redemption, and salvation through Jesus Christ.',
-    description: 'The Living Word is a daily Bible-based sermon segment by Pr. Andrew Kanjala, delivering powerful messages rooted in scripture. This spirit-led series offers encouragement, conviction, and a call to action, helping audiences deepen their relationship with God. Each sermon reflects the spiritual theme of the series, designed to inspire faith and transformation.',
+    description: 'The Living Word is a daily Bible-based sermon segment by Pr. Adrian Kanjala, delivering powerful messages rooted in scripture. This spirit-led series offers encouragement, conviction, and a call to action, helping audiences deepen their relationship with God. Each sermon reflects the spiritual theme of the series, designed to inspire faith and transformation.',
     imageUrl: '/images/sample.avif',
     imageAlt: 'Pastor preaching to a congregation',
     imageOverlayText: 'Salvation',

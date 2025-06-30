@@ -1,13 +1,11 @@
 // app/shows/[slug]/[episodeSlug]/page.tsx
 
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
 import { getEpisodeBySlug, getEpisodesByShowSlug } from '@/lib/episode-utils';
 import EpisodeList from '@/components/EpisodeList';
-import { MdOutlinePlayCircle } from "react-icons/md";
 import VideoPlayer from '@/components/VideoPlayer';
 
 interface EpisodePageProps {
