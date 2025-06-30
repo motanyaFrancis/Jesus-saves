@@ -22,8 +22,13 @@ export async function generateStaticParams() {
 }
 
 // Generate dynamic metadata for SEO
-export async function generateMetadata({ params }: EpisodePageProps): Promise<Metadata> {
-  const { slug, episodeSlug } = await params;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string; episodeSlug: string };
+}): Promise<Metadata> {
+  const { slug, episodeSlug } = params;
 
   const episode = getEpisodeBySlug(slug, episodeSlug);
 
@@ -131,7 +136,7 @@ const EpisodePage = async ({ params }: EpisodePageProps) => {
             </Link>
           </div>
 
-          
+
 
 
           {/* Description */}
