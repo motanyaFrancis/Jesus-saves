@@ -2,6 +2,7 @@
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { getDailyHighlightLinks } from '@/lib/highlights'; // 
 import ImageCarousel from '@/components/ImageCarousel';
 import DailyHighlightsSection from '@/components/DailyHighlightsSection';
 
@@ -16,7 +17,7 @@ const HomePage: React.FC = () => {
   ];
 
   const dailyHighlightsData = allShows.flatMap(show => show.dailyHighlights || []);
-
+  const highlightLinks = getDailyHighlightLinks();
   return (
     <>
       <Navbar />
@@ -29,7 +30,7 @@ const HomePage: React.FC = () => {
           />
           <DailyHighlightsSection highlights={dailyHighlightsData} />
         </main>
-        <Footer />
+        <Footer links={highlightLinks} />
       </div>
     </>
   );
