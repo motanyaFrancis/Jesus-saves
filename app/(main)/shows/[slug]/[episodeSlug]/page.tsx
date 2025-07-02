@@ -7,10 +7,10 @@ import EpisodeList from '@/components/EpisodeList';
 import VideoPlayer from '@/components/VideoPlayer';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
     episodeSlug: string;
-  };
+  }>;
 }
 
 // Static params
@@ -23,18 +23,13 @@ export async function generateStaticParams() {
 }
 
 // Metadata
-// IMPORTANT: Directly define the expected type for params here,
-// instead of referencing PageProps, to avoid potential type conflicts
-// with Next.js's internal Metadata function typing.
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string; episodeSlug: string };
+  params: PageProps['params'];
 }): Promise<Metadata> {
-  const { slug, episodeSlug } = params;
+  const { slug, episodeSlug } = await params;
 
-  // Assuming getEpisodeBySlug is synchronous as per your original code.
-  // If it's asynchronous, you would need to `await` it.
   const episode = getEpisodeBySlug(slug, episodeSlug);
 
   if (!episode) {
@@ -57,18 +52,14 @@ export async function generateMetadata({
 
 // Main page
 export default async function EpisodePage({ params }: PageProps) {
-  const { slug, episodeSlug } = params;
+  const { slug, episodeSlug } = await params;
 
-  // Assuming getEpisodeBySlug is synchronous as per your original code.
-  // If it's asynchronous, you would need to `await` it.
   const episode = getEpisodeBySlug(slug, episodeSlug);
 
   if (!episode) {
     return notFound();
   }
 
-  // Assuming getEpisodesByShowSlug is synchronous as per your original code.
-  // If it's asynchronous, you would need to `await` it.
   const relatedEpisodes = getEpisodesByShowSlug(slug).filter(
     (ep) => ep.slug !== episodeSlug
   );
@@ -145,15 +136,11 @@ export default async function EpisodePage({ params }: PageProps) {
           </div>
 
           <section className="mt-12 pt-8 border-t border-gray-200">
-            <h2 className="text-2xl font-bold mb-6 text-gray-900">
-              More from this Show
-            </h2>
+            <h2 className="text-2xl font-bold mb-6 text-gray-900">More from this Show</h2>
             {relatedEpisodes.length > 0 ? (
               <EpisodeList episodes={relatedEpisodes} showSlug={slug} />
             ) : (
-              <p className="text-gray-600">
-                No other episodes available for this show.
-              </p>
+              <p className="text-gray-600">No other episodes available for this show.</p>
             )}
           </section>
         </div>
