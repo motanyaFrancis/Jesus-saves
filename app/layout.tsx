@@ -26,10 +26,10 @@ const siteUrl =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    template: '%s | Jesus Saves',
-    default: 'Jesus Saves',
+    template: '%s | The Living Word',
+    default: 'The Living Word',
   },
-  description: "Discover our latest program on Jesus Saves.",
+  description: "Discover our latest program on The Living Word.",
 };
 
 export default function RootLayout({

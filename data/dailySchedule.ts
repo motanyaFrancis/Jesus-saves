@@ -66,7 +66,7 @@ export const dailyScheduleData: ScheduleItem[] = [
   {
     startTime: '19:05',
     endTime: '19:35',
-    title: 'Sermon: Jesus Saves',
+    title: 'Sermon: The living Word',
     description: 'An impactful sermon exploring the transformative power of faith and salvation through Jesus Christ. A message of hope and redemption.',
     duration: '30 min',
     mediaSrc: '/images/sample.avif', // Placeholder for video preview
