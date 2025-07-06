@@ -37,12 +37,12 @@ export const allShows: Show[] = [
     title: 'Family Hub - Podcast',
     subtitle: 'Faith-centered content for growing and nurturing family life.',
     description: 'The Family Hub is a 14-episode program focused on guiding individuals and families through courtship, marriage, parenting, and legacy planning. Rooted in Adventist values, it addresses contemporary challenges with practical, biblical insights. Through real-life scenarios and expert commentary, it aims to nurture godly homes and prepare families for eternity.',
-    imageUrl: '/images/jesus-saves.jpg',
+    imageUrl: '/images/Family.jpg',
     imageAlt: 'Family gathering around a Bible',
     imageOverlayText: 'Family Focus',
     dailyHighlights: [
       {
-        imageSrc: '/images/jesus-saves.jpg',
+        imageSrc: '/images/Family.jpg',
         imageAlt: 'Family gathering around a Bible',
         title: 'Family Hub - Podcast',
         slug: 'family-hub',
@@ -54,12 +54,12 @@ export const allShows: Show[] = [
     title: 'Temple of Health',
     subtitle: 'Discover practical advice for a healthier mind, body, and spirit.',
     description: 'Temple of Health is a 14-episode medical and lifestyle series that explores physical, mental, and spiritual well-being. Each episode features expert health insights, biblical principles, and practical advice—helping viewers care for their bodies as temples of God. Rooted in Adventist medical theology, it’s a journey toward healthier, holier living.',
-    imageUrl: '/images/Living-word.jpg',
+    imageUrl: '/images/Health.jpg',
     imageAlt: 'Healthcare workers in action',
     imageOverlayText: 'Live Well',
     dailyHighlights: [
       {
-        imageSrc: '/images/Living-word.jpg',
+        imageSrc: '/images/Health.jpg',
         imageAlt: 'Healthcare workers in action',
         title: 'Temple of Health',
         slug: 'health-wellness',
@@ -106,12 +106,12 @@ export const allShows: Show[] = [
     title: 'Salvation Stories',
     subtitle: 'Testimonies of transformation and divine encounters.',
     description: 'Hear powerful and personal accounts of salvation and redemption. Each episode shares inspiring journeys of individuals whose lives have been transformed by faith. Discover the hope and new beginnings found through divine intervention and unwavering belief.',
-    imageUrl: '/images/Living-word.jpg',
+    imageUrl: '/images/Salvation-story.jpg',
     imageAlt: 'People singing and playing instruments',
     imageOverlayText: 'Salvation',
     dailyHighlights: [
       {
-        imageSrc: '/images/Living-word.jpg',
+        imageSrc: '/images/Salvation-story.jpg',
         imageAlt: 'People singing and playing instruments',
         title: 'Salvation Stories',
         slug: 'salvation-stories',
@@ -123,12 +123,12 @@ export const allShows: Show[] = [
     title: 'Little Lights',
     subtitle: 'Fun, faith-based programming for young minds.',
     description: 'Little Lights is a vibrant children’s series designed to nurture spiritual growth through storytelling, music, crafts, and Bible lessons. Each of the 14 episodes follows Joseph’s journey from Genesis, teaching values like trust, forgiveness, and faith. With songs, memory verses, and fun activities, it brings biblical truths to life for kids ages 2–10.',
-    imageUrl: '/images/Living-word.jpg',
+    imageUrl: '/images/Lights.jpg',
     imageAlt: 'Children playing and learning',
     imageOverlayText: 'Kids Zone',
     dailyHighlights: [
       {
-        imageSrc: '/images/Living-word.jpg',
+        imageSrc: '/images/Lights.jpg',
         imageAlt: 'Children playing and learning',
         title: 'Little Lights - Children',
         slug: 'children',

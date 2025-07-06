@@ -85,8 +85,8 @@ export const allEpisodes: Episode[] = [
       showSlug: 'family-hub',
       title: titles[i],
       description: descriptions[i],
-      videoUrl: '/images/Living-word.jpg',
-      thumbnailUrl: '/images/Living-word.jpg',
+      videoUrl: '/images/Family.jpg',
+      thumbnailUrl: '/images/Family.jpg',
       thumbnailAlt: 'Family in discussion around the dinner table',
       publishedAt: `2025-06-${String(2 + i).padStart(2, '0')}`,
     };
@@ -131,8 +131,8 @@ export const allEpisodes: Episode[] = [
       showSlug: 'health-wellness',
       title: titles[i],
       description: descriptions[i],
-      videoUrl: '/images/Living-word.jpg',
-      thumbnailUrl: '/images/Living-word.jpg',
+      videoUrl: '/images/Health.jpg',
+      thumbnailUrl: '/images/Health.jpg',
       thumbnailAlt: 'Doctor explaining health topic',
       publishedAt: `2025-06-${String(2 + i).padStart(2, '0')}`,
     };
@@ -227,8 +227,8 @@ export const allEpisodes: Episode[] = [
       showSlug: 'children',
       title: titles[i],
       description: descriptions[i],
-      videoUrl: '/images/Living-word.jpg',
-      thumbnailUrl: '/images/Living-word.jpg',
+      videoUrl: '/images/Lights.jpg',
+      thumbnailUrl: '/images/Lights.jpg',
       thumbnailAlt: 'Animated story from Joseph\'s life',
       publishedAt: `2025-06-${String(7 + i).padStart(2, '0')}`,
     };
