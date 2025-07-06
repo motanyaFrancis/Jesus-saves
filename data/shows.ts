@@ -67,23 +67,23 @@ export const allShows: Show[] = [
     ],
   },
 
-  {
-    slug: 'faith-and-harmony',
-    title: 'Faith and Harmony',
-    subtitle: 'Uplifting melodies and spiritual insights.',
-    description: 'Faith and Harmony is a worship-focused series that explores how music deepens spiritual connection. Through a mix of hymns, contemporary worship, and testimonies, it nurtures healing and devotion. Designed to uplift the soul, the show demonstrates how worship brings emotional restoration and joy.',
-    imageUrl: '/images/Living-word.jpg',
-    imageAlt: 'People singing and playing instruments',
-    imageOverlayText: 'Worship',
-    dailyHighlights: [
-      {
-        imageSrc: '/images/Living-word.jpg',
-        imageAlt: 'People singing and playing instruments',
-        title: 'Faith and Harmony',
-        slug: 'faith-and-harmony',
-      },
-    ],
-  },
+  // {
+  //   slug: 'faith-and-harmony',
+  //   title: 'Faith and Harmony',
+  //   subtitle: 'Uplifting melodies and spiritual insights.',
+  //   description: 'Faith and Harmony is a worship-focused series that explores how music deepens spiritual connection. Through a mix of hymns, contemporary worship, and testimonies, it nurtures healing and devotion. Designed to uplift the soul, the show demonstrates how worship brings emotional restoration and joy.',
+  //   imageUrl: '/images/Living-word.jpg',
+  //   imageAlt: 'People singing and playing instruments',
+  //   imageOverlayText: 'Worship',
+  //   dailyHighlights: [
+  //     {
+  //       imageSrc: '/images/Living-word.jpg',
+  //       imageAlt: 'People singing and playing instruments',
+  //       title: 'Faith and Harmony',
+  //       slug: 'faith-and-harmony',
+  //     },
+  //   ],
+  // },
   {
     slug: 'breath-of-praise',
     title: 'Breath of Praise',
