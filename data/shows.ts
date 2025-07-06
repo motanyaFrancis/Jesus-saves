@@ -89,12 +89,12 @@ export const allShows: Show[] = [
     title: 'Breath of Praise',
     subtitle: 'Inspirational music to uplift your spirit.',
     description: 'Breath of Praise is a 16-episode musical Bible study rooted in the Book of Daniel. Featuring narration, discussion, and choral performances, it explores prophetic themes and faith lessons from Daniel’s story. Each episode uses music and scripture to connect ancient prophecy with modern Christian life.',
-    imageUrl: '/images/Living-word.jpg',
+    imageUrl: '/images/Praise.jpg',
     imageAlt: 'People singing and playing instruments',
     imageOverlayText: 'Worship',
     dailyHighlights: [
       {
-        imageSrc: '/images/Living-word.jpg',
+        imageSrc: '/images/Praise.jpg',
         imageAlt: 'People singing and playing instruments',
         title: 'Breath of Praise',
         slug: 'breath-of-praise',

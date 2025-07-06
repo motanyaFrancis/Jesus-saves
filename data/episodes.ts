@@ -181,8 +181,8 @@ export const allEpisodes: Episode[] = [
       showSlug: 'breath-of-praise',
       title: titles[i],
       description: descriptions[i],
-      videoUrl: '/images/Living-word.jpg',
-      thumbnailUrl: '/images/Living-word.jpg',
+      videoUrl: '/images/Praise.jpg',
+      thumbnailUrl: '/images/Praise.jpg',
       thumbnailAlt: 'Musical Bible study performance',
       publishedAt: `2025-06-${String(5 + i).padStart(2, '0')}`,
     };

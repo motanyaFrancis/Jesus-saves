@@ -15,7 +15,7 @@ export const dailyScheduleData: ScheduleItem[] = [
     title: 'Little Lights Children\'s Program',
     description: 'Engaging and educational activities for our young ones, designed to teach valuable lessons in a fun and interactive environment.',
     duration: '30 min',
-    mediaSrc: '/images/sample.avif',
+    mediaSrc: '/images/Lights.jpg',
     mediaType: 'image',
   },
   
@@ -25,7 +25,7 @@ export const dailyScheduleData: ScheduleItem[] = [
     title: 'Health Presentation',
     description: 'Learn practical tips for a healthier lifestyle, focusing on physical, mental, and spiritual well-being. Empower yourself with knowledge for a balanced life.',
     duration: '30 min',
-    mediaSrc: '/images/sample.avif',
+    mediaSrc: '/images/Health.jpg',
     mediaType: 'image',
   },  
   {
@@ -34,7 +34,7 @@ export const dailyScheduleData: ScheduleItem[] = [
     title: 'Music Interlude',
     description: 'Another moment of musical reflection and transition, offering a calming atmosphere before the next segment of our program.',
     duration: '5 min',
-    mediaSrc: '/images/sample.avif',
+    // mediaSrc: '/images/sample.avif',
     mediaType: 'image',
   },
   {
@@ -43,7 +43,7 @@ export const dailyScheduleData: ScheduleItem[] = [
     title: 'Family Hub',
     description: 'Strengthen family bonds and explore faith-based principles for a harmonious home. Practical advice and discussions for every family member.',
     duration: '45 min',
-    mediaSrc: '/images/sample.avif',
+    mediaSrc: '/images/Family.jpg',
     mediaType: 'image',
   },
   {
@@ -52,7 +52,7 @@ export const dailyScheduleData: ScheduleItem[] = [
     title: 'Theme Song - Ancient Words',
     description: 'Join us in singing our inspiring theme song, a powerful anthem that encapsulates the spirit and message of our community.',
     duration: '5 min',
-    mediaSrc: '/images/sample.avif',
+    // mediaSrc: '/images/sample.avif',
     mediaType: 'image',
   },
   {
@@ -61,7 +61,7 @@ export const dailyScheduleData: ScheduleItem[] = [
     title: 'Sermon: The living Word',
     description: 'An impactful sermon exploring the transformative power of faith and salvation through Jesus Christ. A message of hope and redemption.',
     duration: '30 min',
-    mediaSrc: '/images/sample.avif', // Placeholder for video preview
+    mediaSrc: '/images/Living-word.jpg', // Placeholder for video preview
     mediaType: 'video',
   },
   {
@@ -70,7 +70,7 @@ export const dailyScheduleData: ScheduleItem[] = [
     title: 'Music Interlude',
     description: 'A final musical pause to set a contemplative mood before the evening\'s main events. Enjoy the peaceful melodies.',
     duration: '5 min',
-    mediaSrc: '/images/sample.avif',
+    // mediaSrc: '/images/sample.avif',
     mediaType: 'image',
   },
   {
@@ -87,7 +87,7 @@ export const dailyScheduleData: ScheduleItem[] = [
     title: 'Breath of Praise',
     description: 'A Bible study based on the Book of Daniel with songs and performances. This segment explores the prophecies of Daniel, emphasizing their relevance today and encouraging worship through music.',
     duration: '1Hr',
-    mediaSrc: '/images/sample.avif',
+    mediaSrc: '/images/Praise.jpg',
     mediaType: 'image',
   },
 ];

@@ -11,11 +11,11 @@ import { allShows } from '@/data/shows';
 const HomePage: React.FC = () => {
   const carouselImages = [
     { src: '/images/Living-word.jpg', alt: '' },
+    { src: '/images/Praise.jpg', alt: '' },
     { src: '/images/Family.jpg', alt: '' },
     { src: '/images/Health.jpg', alt: '' },
     { src: '/images/Lights.jpg', alt: '' },
     { src: '/images/Salvation-story.jpg', alt: '' },
-    // { src: '/images/Salvation-story.jpg', alt: 'Person walking through a field' },
   ];
 
   const dailyHighlightsData = allShows.flatMap(show => show.dailyHighlights || []);
