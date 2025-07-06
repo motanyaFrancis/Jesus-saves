@@ -10,10 +10,10 @@ import { allShows } from '@/data/shows';
 
 const HomePage: React.FC = () => {
   const carouselImages = [
-    { src: '/images/sample.avif', alt: 'Scenic mountain view' },
-    { src: '/images/sample.avif', alt: 'Abstract colorful art' },
-    { src: '/images/sample.avif', alt: 'Tropical beach sunset' },
-    { src: '/images/sample.avif', alt: 'Person walking through a field' },
+    { src: '/images/Living-word.jpg', alt: 'Scenic mountain view' },
+    { src: '/images/Living-word.jpg', alt: 'Abstract colorful art' },
+    { src: '/images/Living-word.jpg', alt: 'Tropical beach sunset' },
+    { src: '/images/Living-word.jpg', alt: 'Person walking through a field' },
   ];
 
   const dailyHighlightsData = allShows.flatMap(show => show.dailyHighlights || []);

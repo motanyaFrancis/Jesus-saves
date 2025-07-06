@@ -8,11 +8,43 @@ export const allEpisodes: Episode[] = [
   //   showSlug: 'the-living-word',
   //   title: 'Hope in the Storm',
   //   description: 'Discover how faith in Christ can anchor you during life’s storms.',
-  //   videoUrl: '/images/sample.avif',
-  //   thumbnailUrl: '/images/sample.avif',
+  //   videoUrl: '/images/Living-word.jpg',
+  //   thumbnailUrl: '/images/Living-word.jpg',
   //   thumbnailAlt: 'Pastor preaching with open Bible',
   //   publishedAt: '2025-06-01',
   // },
+  ...[...Array(14)].map((_, i) => {
+    const titles = [
+      'The Living Word is Written',
+      'The Law of Cause and Effect.',
+      'Freedom in Christ',
+      'Abba Father',
+      'The law And Grace',
+      'Beware of yourself',
+      'The Other side of God',
+      'Baptism',
+      'The Sabbath',
+      'The Road to hell is paved with good intentions',
+      'Only if you knew...',
+      'What goes around comes around.',
+      'In the line of fire.',
+      'In the Crucible with Christ.',
+    ]
+    const descriptions = [
+      '',
+    ];  
+
+    return {
+      slug: `living-word-episode-${i + 1}`,
+      showSlug: 'the-living-word',
+      title: titles[i],
+      description: descriptions[i],
+      videoUrl: '/images/Living-word.jpg',
+      thumbnailUrl: '/images/Living-word.jpg',
+      thumbnailAlt: 'Pastor preaching with open Bible',
+      publishedAt: `2025-06-${String(1 + i).padStart(2, '0')}`,
+    };
+  }),
 
   // Family Hub Episodes (14)
   ...[...Array(14)].map((_, i) => {
@@ -53,8 +85,8 @@ export const allEpisodes: Episode[] = [
       showSlug: 'family-hub',
       title: titles[i],
       description: descriptions[i],
-      videoUrl: '/images/sample.avif',
-      thumbnailUrl: '/images/sample.avif',
+      videoUrl: '/images/Living-word.jpg',
+      thumbnailUrl: '/images/Living-word.jpg',
       thumbnailAlt: 'Family in discussion around the dinner table',
       publishedAt: `2025-06-${String(2 + i).padStart(2, '0')}`,
     };
@@ -99,8 +131,8 @@ export const allEpisodes: Episode[] = [
       showSlug: 'health-wellness',
       title: titles[i],
       description: descriptions[i],
-      videoUrl: '/images/sample.avif',
-      thumbnailUrl: '/images/sample.avif',
+      videoUrl: '/images/Living-word.jpg',
+      thumbnailUrl: '/images/Living-word.jpg',
       thumbnailAlt: 'Doctor explaining health topic',
       publishedAt: `2025-06-${String(2 + i).padStart(2, '0')}`,
     };
@@ -149,8 +181,8 @@ export const allEpisodes: Episode[] = [
       showSlug: 'breath-of-praise',
       title: titles[i],
       description: descriptions[i],
-      videoUrl: '/images/sample.avif',
-      thumbnailUrl: '/images/sample.avif',
+      videoUrl: '/images/Living-word.jpg',
+      thumbnailUrl: '/images/Living-word.jpg',
       thumbnailAlt: 'Musical Bible study performance',
       publishedAt: `2025-06-${String(5 + i).padStart(2, '0')}`,
     };
@@ -195,8 +227,8 @@ export const allEpisodes: Episode[] = [
       showSlug: 'children',
       title: titles[i],
       description: descriptions[i],
-      videoUrl: '/images/sample.avif',
-      thumbnailUrl: '/images/sample.avif',
+      videoUrl: '/images/Living-word.jpg',
+      thumbnailUrl: '/images/Living-word.jpg',
       thumbnailAlt: 'Animated story from Joseph\'s life',
       publishedAt: `2025-06-${String(7 + i).padStart(2, '0')}`,
     };
