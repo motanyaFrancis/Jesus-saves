@@ -5,6 +5,7 @@ import { DonateOverlayProvider } from '@/components/DonateOverlayProvider';
 import DonateOverlay from '@/components/DonationOverlayWithQR';
 import VerticalDonateButton from '@/components/VerticalDonateButton';
 import TopProgressBar from '@/components/TopProgressBar';
+import Nucleus from '@/components/NecleusIntegration';
 
 // Fonts
 const geistSans = Geist({
@@ -40,6 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white p-0`}>
+        <Nucleus />
         <TopProgressBar />
         <DonateOverlayProvider>
           <VerticalDonateButton />
