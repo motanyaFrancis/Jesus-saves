@@ -45,13 +45,13 @@ const ImpactPartnerSection: React.FC = () => {
               type="number"
               value={impactAmount}
               onChange={(e) => setImpactAmount(parseFloat(e.target.value))}
-              className="w-24 p-2 rounded-md text-black text-right text-lg font-normal bg-white focus:outline-1 focus:outline-rose-600"
+              className="w-24 p-2 rounded-md text-black text-right text-lg font-normal bg-white focus:outline-1 focus:outline-rose-600 hidden"
             />
             <button
               onClick={handleDonateClick}
               className="bg-yellow-500 hover:bg-yellow-600 text-gray-100 font-bold py-3 px-6 rounded-md shadow-lg transition-colors duration-200 "
             >
-              Give Monthly
+              Donate
             </button>
           </div>
         </div>
