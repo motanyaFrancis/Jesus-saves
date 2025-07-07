@@ -32,14 +32,31 @@ export const allEpisodes: Episode[] = [
     ]
     const descriptions = [
       '',
-    ];  
+    ];
+    
+    const videoUrl =[
+      'https://www.youtube.com/watch?v=ar6CjjPUYSE&t=7653s',
+      'https://www.youtube.com/watch?v=ar6CjjPUYSE&t=5095s',
+      'https://www.youtube.com/watch?v=ar6CjjPUYSE&t=1485s',
+      'https://www.youtube.com/watch?v=ar6CjjPUYSE&t=7653s',
+      'https://www.youtube.com/watch?v=ar6CjjPUYSE&t=7653s',
+      'https://www.youtube.com/watch?v=ar6CjjPUYSE&t=7653s',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+    ]
 
     return {
       slug: `living-word-episode-${i + 1}`,
       showSlug: 'the-living-word',
       title: titles[i],
       description: descriptions[i],
-      videoUrl: '/images/Living-word.jpg',
+      videoUrl: videoUrl[i],
       thumbnailUrl: '/images/Living-word.jpg',
       thumbnailAlt: 'Pastor preaching with open Bible',
       publishedAt: `2025-06-${String(1 + i).padStart(2, '0')}`,
@@ -80,12 +97,28 @@ export const allEpisodes: Episode[] = [
       'Wills, inheritance planning, stewardship, and avoiding family conflict.',
       'Spiritual practices for families, encouragement, and eternal focus.'
     ];
+    const videoUrl =[
+      'https://www.youtube.com/watch?v=ar6CjjPUYSE&t=5095s',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+    ]
     return {
       slug: `family-hub-episode-${i + 1}`,
       showSlug: 'family-hub',
       title: titles[i],
       description: descriptions[i],
-      videoUrl: '/images/Family.jpg',
+      videoUrl: videoUrl[i],
       thumbnailUrl: '/images/Family.jpg',
       thumbnailAlt: 'Family in discussion around the dinner table',
       publishedAt: `2025-06-${String(2 + i).padStart(2, '0')}`,
@@ -126,12 +159,28 @@ export const allEpisodes: Episode[] = [
       'Understanding how the nervous system coordinates body functions.',
       'Exploring how the immune system protects the body.'
     ];
+    const videoUrl =[
+      'https://www.youtube.com/watch?v=ar6CjjPUYSE&t=1485s',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+    ]
     return {
       slug: `health-wellness-episode-${i + 1}`,
       showSlug: 'health-wellness',
       title: titles[i],
       description: descriptions[i],
-      videoUrl: '/images/Health.jpg',
+      videoUrl: videoUrl[i],
       thumbnailUrl: '/images/Health.jpg',
       thumbnailAlt: 'Doctor explaining health topic',
       publishedAt: `2025-06-${String(2 + i).padStart(2, '0')}`,
@@ -222,12 +271,28 @@ export const allEpisodes: Episode[] = [
       'Joseph continues honoring God in all he does (Genesis 50:19–21).',
       'Joseph testifies to God’s saving plan (Genesis 50:24–26).'
     ];
+    const videoUrl =[
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+      '/images/Living-word.jpg',
+    ]
     return {
       slug: `children-episode-${i + 1}`,
       showSlug: 'children',
       title: titles[i],
       description: descriptions[i],
-      videoUrl: '/images/Lights.jpg',
+      videoUrl: videoUrl[i],
       thumbnailUrl: '/images/Lights.jpg',
       thumbnailAlt: 'Animated story from Joseph\'s life',
       publishedAt: `2025-06-${String(7 + i).padStart(2, '0')}`,
