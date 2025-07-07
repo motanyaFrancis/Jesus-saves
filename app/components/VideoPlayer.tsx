@@ -7,9 +7,24 @@ interface VideoPlayerProps {
     title: string;
 }
 
-const extractYouTubeId = (url: string) => {
-    const parsed = new URL(url);
-    return parsed.searchParams.get('v') || parsed.pathname.split('/').pop();
+const extractYouTubeIdAndStart = (url: string) => {
+    try {
+        const parsed = new URL(url);
+        let videoId = parsed.searchParams.get('v') || parsed.pathname.split('/').pop();
+        let startTime = 0;
+
+        const tParam = parsed.searchParams.get('t');
+        if (tParam) {
+            const match = tParam.match(/(\d+)/);
+            if (match) {
+                startTime = parseInt(match[1], 10);
+            }
+        }
+
+        return { videoId, startTime };
+    } catch {
+        return { videoId: null, startTime: 0 };
+    }
 };
 
 const extractVimeoId = (url: string) => {
@@ -18,12 +33,15 @@ const extractVimeoId = (url: string) => {
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({ url, title }) => {
     if (url.includes('youtube.com') || url.includes('youtu.be')) {
-        const videoId = extractYouTubeId(url);
+        const { videoId, startTime } = extractYouTubeIdAndStart(url);
+        const embedUrl = `https://www.youtube.com/embed/${videoId}${startTime ? `?start=${startTime}` : ''
+            }`;
+
         return (
             <div className="relative w-full aspect-video rounded-lg overflow-hidden mb-8 shadow-lg">
                 <iframe
                     className="w-full h-full"
-                    src={`https://www.youtube.com/embed/${videoId}`}
+                    src={embedUrl}
                     title={title}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
