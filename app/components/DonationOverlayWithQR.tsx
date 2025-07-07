@@ -54,9 +54,9 @@ export default function DonationOverlayWithQR() {
                             height={40}
                             className="w-24 h-auto mb-4"
                         />
-                        <h2 className="text-lg font-bold text-gray-800 uppercase">Support Our Mission</h2>
+                        <h2 className="text-lg font-bold text-gray-800 uppercase">Join Us in Sharing Eternal Hope</h2>
                         <p className="text-gray-600 mt-2 mb-8 text-sm text-justify">
-                            Did you know 3.4 billion people have yet to be reached with a message of Eternal Hope? With over 7,000 unreached people groups, our mission isn&apos;t just about numbers; it’s about reaching hearts across diverse cultures and languages. At Hope Channel, we are committed to sharing the message of hope in over 100 languages across more than 80 countries. Our tailorose content meets the unique spiritual needs of each community, but there is still so much more to do. Give Hope today, and join us in reaching 1 billion souls with Eternal Hope.
+                            More than <span className="font-bold text-rose-900">3.4 billion people</span> worldwide have yet to hear the message of Eternal Hope. Through <span className="font-bold text-rose-900">The Living Word series</span> and the ministry of <span className="font-semibold">Seventh-day Adventist Church Karen Community</span>, we are committed to sharing Christ’s love and truth across cultures and languages. With your support, we can continue spreading hope to unreached hearts and help fulfill the gospel mission. <span className="font-semibold">Join us in bringing Eternal Hope to the world.</span>
                         </p>
                     </div>
                 </div>
