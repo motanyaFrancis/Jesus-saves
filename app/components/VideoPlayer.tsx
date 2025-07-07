@@ -10,7 +10,7 @@ interface VideoPlayerProps {
 const extractYouTubeIdAndStart = (url: string) => {
     try {
         const parsed = new URL(url);
-        let videoId = parsed.searchParams.get('v') || parsed.pathname.split('/').pop();
+        const videoId = parsed.searchParams.get('v') || parsed.pathname.split('/').pop();
         let startTime = 0;
 
         const tParam = parsed.searchParams.get('t');
