@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { DonateOverlayProvider } from '@/components/DonateOverlayProvider';
-import DonateOverlay from '@/components/DonateOverlay';
+import DonateOverlay from '@/components/DonationOverlayWithQR';
 import VerticalDonateButton from '@/components/VerticalDonateButton';
 import TopProgressBar from '@/components/TopProgressBar';
 
