@@ -77,7 +77,7 @@ const waysToGive = [
 const WaysToGiveSection: React.FC = () => {
   return (
     <section className="bg-rose-900 py-16 px-4 md:px-8 lg:px-16">
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="max-w-7xl mx-auto px-2 md:px-8">
         <h1 className="text-4xl font-normal text-gray-50 mb-12 text-center md:text-left">
           Ways to <span className="font-semibold">Give</span>
         </h1>
