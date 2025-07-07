@@ -13,14 +13,14 @@ const MetricsSection: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center text-gray-100 text-xl font-semibold">
           {/* TV Icon */}
           <PiMonitorThin className="h-10 w-10 mb-2 md:mb-0 md:mr-3" />
-          <span>80+ channels</span>
+          <span>5+ Programs</span>
         </div>
 
         {/* Metric 2: 100 languages */}
         <div className="flex flex-col md:flex-row items-center text-gray-100 text-xl font-semibold">
           {/* Language Icon */}
           <PiTranslateThin className="h-10 w-10 mb-2 md:mb-0 md:mr-3" />
-          <span>100 languages</span>
+          <span>1+ languages</span>
         </div>
 
         {/* Metric 3: 200 countries */}
