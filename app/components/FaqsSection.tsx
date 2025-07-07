@@ -15,7 +15,7 @@ const faqs: FaqItem[] = [
     id: 1,
     question: 'Can I make a donation over the phone?',
     answer:
-      'Yes, you can make a donation over the phone by calling our local number at **[Your Phone Number Here]**. Our team is ready to assist you with your donation.',
+      'Yes, you can make a donation over the phone by calling our local number at +254 717 048754. Our team is ready to assist you with your donation.',
   },
   {
     id: 2,
@@ -33,14 +33,14 @@ const faqs: FaqItem[] = [
     id: 4,
     question: 'Can I cancel my monthly donation?',
     answer:
-      'Yes, you can cancel your monthly donation at any time. Please contact our donor relations team by phone at **[Your Phone Number Here]** or email at **[Your Email Address Here]**, and we will gladly assist you with the cancellation.',
+      'Yes, you can cancel your monthly donation at any time. Please contact our donor relations team by phone at +254 717 048754 or email at info@sdackc.org, and we will gladly assist you with the cancellation.',
   },
-  {
-    id: 5,
-    question: 'Can I update my Credit Card information?',
-    answer:
-      'To update your credit card information, please call our donor relations team at **[Your Phone Number Here]**. For your security, we do not recommend sending credit card details via email.',
-  },
+  // {
+  //   id: 5,
+  //   question: 'Can I update my Credit Card information?',
+  //   answer:
+  //     'To update your credit card information, please call our donor relations team at +254 717 048754. For your security, we do not recommend sending credit card details via email.',
+  // },
   {
     id: 6,
     question: 'What is SDA Karen Community Trust\'s legal status/identification?',
@@ -51,7 +51,7 @@ const faqs: FaqItem[] = [
     id: 7,
     question: 'I don’t see my question answered and need further assistance with my donation; whom can I contact?',
     answer:
-      'If your question isn’t answered here or if you need further assistance, please feel free to contact our dedicated donor relations team. You can reach us by phone at **[Your Phone Number Here]** or via email at **[Your Email Address Here]**. We are happy to help!',
+      'If your question isn’t answered here or if you need further assistance, please feel free to contact our dedicated donor relations team. You can reach us by phone at +254 717 048754 or via email at info@sdackc.org. We are happy to help!',
   },
 ];
 
